@@ -1,0 +1,14 @@
+{
+    "navbar": {
+        "aboutUs": "SOBRE NOSOTROS",
+        "campus": "CAMPUS",
+        "courses": "CURSOS",
+        "prices": "PRECIOS Y CATÁLOGOS",
+        "studentLife": "VIDA ESTUDIANTIL",
+        "contactUs": "CONTÁCTANOS"
+    },
+    "banner": {
+        "welcome": "Vive, aprende y habla!",
+        "p": "Estudia en NL College y aprende un nuevo idioma mientras vives una experiencia increíble en Barcelona y Madrid."
+    }
+}
