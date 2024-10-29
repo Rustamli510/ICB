@@ -15,18 +15,18 @@ const ContactForm = () => {
             </div>
           </div>
           
-          <div className="lg:w-1/2 bg-white p-6 rounded-lg shadow-lg mt-8 lg:mt-0">
+          <div className="lg:w-1/2 bg-white p-6 rounded-lg shadow-lg mt-8 mb-10 lg:mt-0">
             <form className="space-y-4">
               <input type="text" placeholder="Full name *" className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
               <input type="email" placeholder="E-mail *" className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
               <input type="text" placeholder="Telephone number / Whatsapp *" className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
               <select className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
                 <option>Country *</option>
-                {/* Diğer ülkeler buraya eklenebilir */}
+                {/* Add other countries */}
               </select>
               <select className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
                 <option>Nationality *</option>
-                {/* Diğer milletler buraya eklenebilir */}
+                {/* Add other nationalities */}
               </select>
               <div className="flex items-center space-x-4">
                 <label className="flex items-center space-x-2">

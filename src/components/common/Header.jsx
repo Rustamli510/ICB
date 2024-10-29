@@ -21,7 +21,9 @@ const Header = () => {
     return (
         <header className="w-full absolute z-10 bg-transparent text-white py-8 px-8 flex items-center justify-between">
             {/* Logo */}
-            <div className="text-xl font-bold">NL College</div>
+            <div className="text-xl font-bold">
+               <Link to='/' >NL College</Link>
+                </div>
 
             {/* Menu */}
             <nav className="hidden md:flex space-x-8 relative">
