@@ -9,7 +9,7 @@ const Banner = () => {
   return (
     <section className="relative h-[100vh] flex items-center justify-center text-center bg-cover bg-center" style={{ backgroundImage: "url('/path/to/image.jpg')" }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="relative z-10 text-white p-4">
+      <div className="relative text-white p-4">
         <h1 className="text-4xl md:text-6xl font-bold">
           {t('banner.welcome')}
         </h1>

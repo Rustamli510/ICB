@@ -76,26 +76,28 @@ const OurProgram = () => {
                 </section>
 
                 {/* Section 4 */}
-                <section className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+                <section className="flex flex-col md:flex-row items-start md:items-center space-y-8 md:space-y-0 md:space-x-8 w-full">
                     <div className="flex-1">
                         <h3 className="text-2xl font-bold">We just started!</h3>
                         <p className="text-4xl mt-2">→</p>
                     </div>
-                    <div className="flex flex-1 space-x-4">
-                        <div className="bg-red-500 w-[300px] text-white p-6 rounded-lg shadow-lg">
+                    <div className="flex flex-col md:flex-row flex-1 space-y-4 md:space-y-0 md:space-x-4 w-full">
+                        <div className="bg-red-500 w-full md:w-[350px] text-white p-6 rounded-lg shadow-lg">
                             <h4 className="text-lg font-bold">Not sure what level you're at?</h4>
                             <p className="text-sm mt-2">We have prepared a test to determine your English and Spanish proficiency levels</p>
                         </div>
-                        <div className="bg-red-500 text-white w-[300px] p-6 rounded-lg shadow-lg">
+                        <div className="bg-red-500 w-full md:w-auto text-white p-6 rounded-lg shadow-lg">
                             <h4 className="text-lg font-bold">Which course will best fit your needs?</h4>
                             <p className="text-sm mt-2">We have options for everyone</p>
                         </div>
-                        <div className="bg-red-500 text-white w-[300px] p-6 rounded-lg shadow-lg">
+                        <div className="bg-red-500 w-full md:w-auto text-white p-6 rounded-lg shadow-lg">
                             <h4 className="text-lg font-bold">Who said learning couldn't be fun?</h4>
                             <p className="text-sm mt-2">We have different extra cultural activities every month. Check them out!</p>
                         </div>
                     </div>
                 </section>
+
+
             </div>
         </section>
     );

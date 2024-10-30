@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
     const { t, i18n } = useTranslation();
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState("EN");
-    const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState()
+    const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+    const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+    const [isAboutDropdownOpenMobile, setIsAboutDropdownOpenMobile] = useState(false);
+    const navigate = useNavigate();
 
     const toggleLanguageMenu = () => {
         setIsLanguageOpen(!isLanguageOpen);
@@ -18,87 +21,163 @@ const Header = () => {
         setIsLanguageOpen(false);
     };
 
+    const toggleBurgerMenu = () => {
+        setIsBurgerMenuOpen(!isBurgerMenuOpen);
+        document.body.style.overflow = isBurgerMenuOpen ? "auto" : "hidden";
+    };
+
+    const handleMenuClick = (path) => {
+        navigate(path);
+        setIsBurgerMenuOpen(false);
+        setIsAboutDropdownOpen(false);
+        setIsAboutDropdownOpenMobile(false);
+        document.body.style.overflow = "auto";
+    };
+
+    useEffect(() => {
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, []);
+
     return (
-        <header className="w-full absolute z-10 bg-transparent text-white py-8 px-8 flex items-center justify-between">
+        <header className="w-full fixed top-0 left-0 z-10 bg-gradient-to-r from-gray-800 to-blue-900 text-white py-4 px-8 flex items-center justify-between">
             {/* Logo */}
             <div className="text-xl font-bold">
-               <Link to='/' >NL College</Link>
-                </div>
+                <Link to="/">
+                    <img src="/path/to/logo.png" alt="NL College Logo" className="h-8" /> {/* Adjust logo path and height */}
+                </Link>
+            </div>
 
-            {/* Menu */}
+            {/* Desktop Navbar */}
             <nav className="hidden md:flex space-x-8 relative">
-                {/* About Us with Dropdown on Hover */}
-                <div
-                    className="relative"
-                    onMouseEnter={() => setIsAboutDropdownOpen(true)}
-                    onMouseLeave={() => setIsAboutDropdownOpen(false)}
-                >
-                    <button className="hover:text-yellow-500">
-                        {t('navbar.aboutUs')}
+                {/* About Us Dropdown */}
+                <div className="relative">
+                    <button
+                        onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
+                        className="text-lg font-bold hover:text-yellow-500 focus:outline-none"
+                    >
+                        {t('navbar.aboutUs').toUpperCase()}
                     </button>
                     {isAboutDropdownOpen && (
-                        <div className="absolute mt-2 bg-white text-black text-sm rounded-md shadow-lg w-60">
-                            <Link to="/our-mission" className="block px-4 py-2 hover:text-red-600">
-                                Our mission
-                            </Link>
-                            <Link to="/meet-our-team" className="block px-4 py-2 hover:text-red-600">
-                                Meet our team
-                            </Link>
-                            <Link to="/affiliations-recognitions" className="block px-4 py-2 hover:text-red-600">
-                                Affiliations & Recognitions
-                            </Link>
-                            <Link to="/study-program-certification" className="block px-4 py-2 hover:text-red-600">
-                                Study program and certification
-                            </Link>
-                            <Link to="/work-with-us" className="block px-4 py-2 hover:text-red-600">
-                                Work with us
-                            </Link>
-                            <Link to="/terms-conditions" className="block px-4 py-2 hover:text-red-600">
-                                Terms and conditions
-                            </Link>
+                        <div className="absolute top-full left-0 mt-2 w-48 bg-white text-black rounded shadow-lg z-20">
+                            <button onClick={() => handleMenuClick("/our-mission")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                                OUR MISSION & METHODOLOGY
+                            </button>
+                            <button onClick={() => handleMenuClick("/study-program-certification")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                                OUR PROGRAM
+                            </button>
+                            <button onClick={() => handleMenuClick("/meet-our-team")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                                MEET OUR TEAM
+                            </button>
+                            <button onClick={() => handleMenuClick("/faq")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                                FREQUENTLY ASKED QUESTIONS
+                            </button>
+                            <button onClick={() => handleMenuClick("/work-with-us")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                                WORK WITH US
+                            </button>
                         </div>
                     )}
                 </div>
-                
-                <Link className="hover:text-yellow-500">{t('navbar.courses')}</Link>
-                <Link className="hover:text-yellow-500">{t('navbar.prices')}</Link>
-                <Link to='/student-life' className="hover:text-yellow-500">{t('navbar.studentLife')}</Link>
-                <Link to='/contact-us' className="hover:text-yellow-500">{t('navbar.contactUs')}</Link>
+
+                <Link to="/spanish-course" className="text-lg font-bold hover:text-yellow-500">
+                    {t('navbar.courses').toUpperCase()}
+                </Link>
+                <Link to="/prices-catalogues" className="text-lg font-bold hover:text-yellow-500">
+                    {t('navbar.prices').toUpperCase()}
+                </Link>
+                <Link to="/student-life" className="text-lg font-bold hover:text-yellow-500">
+                    {t('navbar.studentLife').toUpperCase()}
+                </Link>
+                <Link to="/contact-us" className="text-lg font-bold hover:text-yellow-500">
+                    {t('navbar.contactUs').toUpperCase()}
+                </Link>
             </nav>
 
-            {/* Language Choice */}
-            <div className="relative">
-                <button
-                    onClick={toggleLanguageMenu}
-                    className="flex items-center space-x-2 hover:text-yellow-500 focus:outline-none"
-                >
-                    <span>{selectedLanguage}</span>
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                </button>
-
-                {isLanguageOpen && (
-                    <div className="absolute right-0 mt-2 w-24 bg-white text-black rounded-md shadow-lg">
-                        <button
-                            onClick={() => changeLanguage("EN")}
-                            className="block w-full px-4 py-2 text-left hover:bg-gray-200 hover:rounded-md"
-                        >
-                            EN
-                        </button>
-                        <button
-                            onClick={() => changeLanguage("RU")}
-                            className="block w-full px-4 py-2 text-left hover:bg-gray-200 hover:rounded-md"
-                        >
-                            RU
-                        </button>
-                        <button
-                            onClick={() => changeLanguage("ES")}
-                            className="block w-full px-4 py-2 text-left hover:bg-gray-200 hover:rounded-md"
-                        >
-                            ES
-                        </button>
-                    </div>
-                )}
+            {/* Language Selector */}
+            <div className="hidden md:flex items-center space-x-2 cursor-pointer" onClick={toggleLanguageMenu}>
+                <span className="text-lg font-bold">{selectedLanguage}</span>
+                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
             </div>
+
+            {/* Language Menu Dropdown */}
+            {isLanguageOpen && (
+                <div className="absolute top-16 right-8 bg-white text-black rounded-md shadow-lg">
+                    <button
+                        onClick={() => changeLanguage("EN")}
+                        className="block w-full px-4 py-2 text-left hover:bg-gray-200"
+                    >
+                        EN
+                    </button>
+                    <button
+                        onClick={() => changeLanguage("ES")}
+                        className="block w-full px-4 py-2 text-left hover:bg-gray-200"
+                    >
+                        ES
+                    </button>
+                </div>
+            )}
+
+            {/* Burger Menu Button (Visible on Mobile) */}
+            <button
+                onClick={toggleBurgerMenu}
+                className="md:hidden flex flex-col space-y-1 focus:outline-none"
+            >
+                <div className="w-6 h-0.5 bg-white"></div>
+                <div className="w-6 h-0.5 bg-white"></div>
+                <div className="w-6 h-0.5 bg-white"></div>
+            </button>
+
+            {/* Full-Screen Burger Menu Overlay (Mobile Only) */}
+            {isBurgerMenuOpen && (
+                <div className="fixed text-center inset-0 bg-gray-950 text-white flex flex-col items-center justify-center space-y-8 z-50">
+                    <button onClick={toggleBurgerMenu} className="absolute top-8 right-8 text-3xl">
+                        &times;
+                    </button>
+
+                    {/* About Us Dropdown in Burger Menu */}
+                    <div className="relative">
+                        <button
+                            onClick={() => setIsAboutDropdownOpenMobile(!isAboutDropdownOpenMobile)}
+                            className="text-lg font-bold hover:text-red-500 focus:outline-none"
+                        >
+                            {t('navbar.aboutUs').toUpperCase()}
+                        </button>
+                        {isAboutDropdownOpenMobile && (
+                            <div className="flex flex-col items-start mt-2 space-y-2 transition-all">
+                                <button onClick={() => handleMenuClick("/our-mission")} className="text-sm hover:text-yellow-500">
+                                    OUR MISSION & METHODOLOGY
+                                </button>
+                                <button onClick={() => handleMenuClick("/study-program-certification")} className="text-sm hover:text-yellow-500">
+                                    OUR PROGRAM
+                                </button>
+                                <button onClick={() => handleMenuClick("/meet-our-team")} className="text-sm hover:text-yellow-500">
+                                    MEET OUR TEAM
+                                </button>
+                                <button onClick={() => handleMenuClick("/faq")} className="text-sm hover:text-yellow-500">
+                                    FREQUENTLY ASKED QUESTIONS
+                                </button>
+                                <button onClick={() => handleMenuClick("/work-with-us")} className="text-sm hover:text-yellow-500">
+                                    WORK WITH US
+                                </button>
+                            </div>
+                        )}
+                    </div>
+
+                    <button onClick={() => handleMenuClick("/courses")} className="text-lg font-bold hover:text-yellow-500">
+                        {t('navbar.courses').toUpperCase()}
+                    </button>
+                    <button onClick={() => handleMenuClick("/prices-catalogues")} className="text-lg font-bold hover:text-yellow-500">
+                        {t('navbar.prices').toUpperCase()}
+                    </button>
+                    <button onClick={() => handleMenuClick("/student-life")} className="text-lg font-bold hover:text-yellow-500">
+                        {t('navbar.studentLife').toUpperCase()}
+                    </button>
+                    <button onClick={() => handleMenuClick("/contact-us")} className="text-lg font-bold hover:text-yellow-500">
+                        {t('navbar.contactUs').toUpperCase()}
+                    </button>
+                </div>
+            )}
         </header>
     );
 };

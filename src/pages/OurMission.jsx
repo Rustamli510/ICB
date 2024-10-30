@@ -2,7 +2,7 @@ import React from 'react'
 
 const OurMission = () => {
     return (
-        <section className="w-full">
+        <section className="w-full mb-5">
             {/* Background Image and Overlay */}
             <div className="relative w-full h-44 bg-cover bg-center overflow-hidden mb-8" style={{ backgroundImage: `url('/path/to/your/image.jpg')` }}>
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
