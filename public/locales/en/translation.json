@@ -1,11 +1,11 @@
 {
     "navbar": {
       "aboutUs": "ABOUT US",
-      "campus": "CAMPUS",
       "courses": "COURSES",
       "prices": "PRICES & CATALOGUES",
       "studentLife": "STUDENT LIFE",
-      "contactUs": "CONTACT US"
+      "contactUs": "CONTACT US",
+      "termsConditions": "TERMS AND CONDITIONS"
     },
     "banner": {
         "welcome": "Live, learn & Speak!",

@@ -1,0 +1,21 @@
+.slick-slider{
+    position: relative;
+}
+
+.slick-track{
+    width: 1450px !important;
+    display: flex;
+}
+
+.custom-prev-arrow{
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    cursor: pointer;
+}
+
+.custom-next-arrow{
+    position: absolute;
+    left: 55%;
+    cursor: pointer;
+}

@@ -2,8 +2,8 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <section className="h-screen w-full bg-cover bg-center relative" style={{ backgroundImage: `url('../../assests/images/footer-1.webp')` }}>
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <section className=" w-full bg-cover bg-center relative" style={{ backgroundImage: `url('../../assests/images/footer-1.webp')` }}>
+      <div className="bg-black bg-opacity-50 flex items-center justify-center">
         <div className="container mx-auto p-4 lg:px-0 flex flex-col lg:flex-row items-center lg:items-start">
           <div className="lg:w-1/2 text-white p-4 lg:pr-10">
             <h1 className="text-4xl font-semibold mb-20">Invest in your studies at a quality institution</h1>
@@ -15,16 +15,16 @@ const ContactForm = () => {
             </div>
           </div>
           
-          <div className="lg:w-1/2 bg-white p-6 rounded-lg shadow-lg mt-8 mb-10 lg:mt-0">
+          <div className="lg:w-1/2 p-6 mt-8 mb-10 lg:mt-0">
             <form className="space-y-4">
-              <input type="text" placeholder="Full name *" className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
-              <input type="email" placeholder="E-mail *" className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
-              <input type="text" placeholder="Telephone number / Whatsapp *" className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
-              <select className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
+              <input type="text" placeholder="Full name *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
+              <input type="email" placeholder="E-mail *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
+              <input type="text" placeholder="Telephone number / Whatsapp *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
+              <select className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
                 <option>Country *</option>
                 {/* Add other countries */}
               </select>
-              <select className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
+              <select className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
                 <option>Nationality *</option>
                 {/* Add other nationalities */}
               </select>

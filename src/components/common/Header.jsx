@@ -55,7 +55,7 @@ const Header = () => {
                 <div className="relative">
                     <button
                         onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
-                        className="text-lg font-bold hover:text-yellow-500 focus:outline-none"
+                        className="text-sm md:text-md font-bold hover:text-yellow-500 focus:outline-none"
                     >
                         {t('navbar.aboutUs').toUpperCase()}
                     </button>
@@ -80,17 +80,20 @@ const Header = () => {
                     )}
                 </div>
 
-                <Link to="/spanish-course" className="text-lg font-bold hover:text-yellow-500">
+                <Link to="/spanish-course" className="text-sm md:text-md font-bold hover:text-yellow-500">
                     {t('navbar.courses').toUpperCase()}
                 </Link>
-                <Link to="/prices-catalogues" className="text-lg font-bold hover:text-yellow-500">
+                <Link to="/prices-catalogues" className="text-sm md:text-md font-bold hover:text-yellow-500">
                     {t('navbar.prices').toUpperCase()}
                 </Link>
-                <Link to="/student-life" className="text-lg font-bold hover:text-yellow-500">
+                <Link to="/student-life" className="text-sm md:text-md font-bold hover:text-yellow-500">
                     {t('navbar.studentLife').toUpperCase()}
                 </Link>
-                <Link to="/contact-us" className="text-lg font-bold hover:text-yellow-500">
+                <Link to="/contact-us" className="text-sm md:text-md font-bold hover:text-yellow-500">
                     {t('navbar.contactUs').toUpperCase()}
+                </Link>
+                <Link to="/terms-conditions" className="text-sm md:text-md font-bold hover:text-yellow-500">
+                    {t('navbar.termsConditions').toUpperCase()}
                 </Link>
             </nav>
 
@@ -175,6 +178,9 @@ const Header = () => {
                     </button>
                     <button onClick={() => handleMenuClick("/contact-us")} className="text-lg font-bold hover:text-yellow-500">
                         {t('navbar.contactUs').toUpperCase()}
+                    </button>
+                    <button onClick={() => handleMenuClick("/terms-conditions")} className="text-lg font-bold hover:text-yellow-500">
+                        {t('navbar.termsConditions').toUpperCase()}
                     </button>
                 </div>
             )}
