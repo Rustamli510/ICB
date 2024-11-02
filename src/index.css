@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'Cyrene';
+    src: url('./assets/fonts/Cyrene/Regular.otf') format('opentype');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
+body {
+    font-family: 'Cyrene', sans-serif;
+}

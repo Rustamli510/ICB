@@ -1,15 +1,25 @@
-// src/components/Banner.jsx
 import React from "react";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
+import BannerVideo from '../assets/videos/BannerVideo.mp4';
 
 const Banner = () => {
-    //Translate
-    const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <section className="relative h-[100vh] flex items-center justify-center text-center bg-cover bg-center" style={{ backgroundImage: "url('/path/to/image.jpg')" }}>
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="relative text-white p-4">
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover">
+          <source src={BannerVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="relative text-white p-4 z-10">
         <h1 className="text-4xl md:text-6xl font-bold">
           {t('banner.welcome')}
         </h1>
