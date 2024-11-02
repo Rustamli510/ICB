@@ -11,11 +11,11 @@ const OurProgram = () => {
                 </h2>
             </div>
 
-            <div className="container mx-auto p-4">
+            <div className="container max-w-7xl mx-auto p-4">
                 {/* Content Section */}
                 <div className="flex flex-col md:flex-row mt-8 space-y-6 md:space-y-0 md:space-x-8">
                     {/* Left Side Text */}
-                    <div className="flex-1 text-3xl md:text-4xl font-bold">
+                    <div className="flex-1 text-3xl md:text-6xl font-bold">
                         <p>Know our</p>
                         <p className="text-red-500">program</p>
                         <p className="text-lg text-gray-700 mt-4">Natural Learning & Communicative Program</p>

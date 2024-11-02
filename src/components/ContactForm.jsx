@@ -2,8 +2,8 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <section className=" w-full bg-[#B9BAA3]">
-      <div className="bg-black bg-opacity-50 flex items-center justify-center">
+    <section className="w-full bg-[#363636]">
+      <div className="flex items-center justify-center">
         <div className="container mx-auto p-4 lg:px-0 flex flex-col lg:flex-row items-center lg:items-start lg:space-x-14">
           <div className="lg:w-1/2 text-white p-4 lg:pr-10">
             <h1 className="text-4xl font-semibold mb-20">Invest in your studies at a quality institution</h1>
@@ -43,13 +43,13 @@ const ContactForm = () => {
                 <input type="checkbox" className="form-checkbox text-yellow-500" />
                 <p className="text-xs ml-2">
                   I have read and accept the 
-                  <span className="text-yellow-500 underline"> NL College Privacy Policy</span>, 
-                  <span className="text-yellow-500 underline"> Terms & Conditions</span>, 
-                  <span className="text-yellow-500 underline"> Cancellation Policy</span>, and 
-                  <span className="text-yellow-500 underline"> Cookies Policy</span>.
+                  <span className="text-[#902923] underline"> NL College Privacy Policy</span>, 
+                  <span className="text-[#902923] underline"> Terms & Conditions</span>, 
+                  <span className="text-[#902923] underline"> Cancellation Policy</span>, and 
+                  <span className="text-[#902923] underline"> Cookies Policy</span>.
                 </p>
               </div>
-              <button type="submit" className="w-full py-3 bg-yellow-500 text-white rounded-md font-semibold hover:bg-yellow-600 transition">SEND</button>
+              <button type="submit" className="w-full py-3 bg-[#902923] text-white rounded-md font-semibold hover:bg-yellow-600 transition">SEND</button>
             </form>
           </div>
         </div>

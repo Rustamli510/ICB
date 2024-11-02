@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const WorkWithUs = () => {
     return (
@@ -9,6 +10,47 @@ const WorkWithUs = () => {
                     <h1 className="text-white text-3xl md:text-4xl mt-16 text-center font-bold">Work with us</h1>
                 </div>
             </div>
+
+            <section className="max-w-7xl mx-auto py-16 px-4 lg:px-8">
+                <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-16">
+                    {/* Left Column - Heading */}
+                    <div className="flex-shrink-0 lg:w-1/3 text-center lg:text-left">
+                        <h1 className="text-6xl font-bold text-gray-900">
+                            We're <span className="text-red-500">hiring!</span>
+                        </h1>
+                        <h2 className="text-xl font-semibold text-red-500 mt-4">How to apply</h2>
+                    </div>
+
+                    {/* Right Column - Description, Button, and List */}
+                    <div className="lg:w-2/3 text-center lg:text-left">
+                        <p className="text-gray-700 text-xl mb-6">
+                            Are you looking for new opportunities? We’re always looking for new talent. If you’re a professional in the Teaching, Administration or Marketing field, come and say Hi!
+                        </p>
+
+                        {/* CTA Button */}
+                        <div className="mb-6">
+                            <Link
+                                className="block text-center bg-[#902923] text-white px-6 py-3 font-semibold rounded-lg transition duration-300 hover:bg-red-600 hover:scale-[1.05] hover:shadow-2xl ease-in-out"
+                            >
+                                OUR CURRENT JOB VACANCIES
+                            </Link>
+                        </div>
+
+                        {/* Application Steps */}
+                        <ul className="text-gray-700 space-y-4">
+                            <li className="flex items-start">
+                                <span className="text-red-500 mr-2">•</span> Fill the form below
+                            </li>
+                            <li className="flex items-start space-x-1">
+                                <span className="text-red-500 mr-2">•</span> Send us your CV at <Link className="text-red-500 underline">people@nlcollege.es</Link>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-red-500 mr-2">•</span> Apply via LinkedIn
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             {/* Main Content */}
             <div className="flex max-w-[1240px] mx-auto flex-col md:flex-row justify-between items-start px-8 lg:px-0">

@@ -13,6 +13,7 @@ import TermsAndConditions from "../pages/TermsAndConditions";
 import ContactUs from "../pages/ContactUs";
 import OurProgram from "../pages/OurProgram";
 import ScrollToTop from "../components/function/ScrollToTop";
+import FAQ from "../pages/FAQ";
 
 function Layout() {
     return (
@@ -30,6 +31,7 @@ function Layout() {
                 <Route path="/spanish-course" element={<SpanishCourse />} />
                 <Route path="/student-life" element={<StudentLife />} />
                 <Route path="/contact-us" element={<ContactUs />} />
+                <Route path='/faq' element={<FAQ />} />
             </Routes>
             <Footer />
         </>

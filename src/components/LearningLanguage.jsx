@@ -92,7 +92,7 @@ const LearningLanguage = () => {
     };
     return (
         <section>
-            <div className="bg-gray-800 text-white px-4 py-20 md:py-32">
+            <div className="bg-[#B9BAA3] text-white px-4 py-20 md:py-32">
                 <div className="max-w-6xl mx-auto md:flex md:space-x-10 ">
                     <h1 className="text-3xl md:text-5xl font-bold mb-10 md:mb-3">
                         Learning a new <br />language is one thing,

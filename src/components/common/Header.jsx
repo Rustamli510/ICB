@@ -81,19 +81,19 @@ const Header = () => {
                     </button>
                     {isAboutDropdownOpen && (
                         <div className="absolute top-full left-0 mt-2 w-80 bg-white text-black rounded shadow-lg z-20">
-                            <button onClick={() => handleMenuClick("/our-mission")} className="block w-full px-4 py-2 text-left hover:text-red-600">
+                            <button onClick={() => handleMenuClick("/our-mission")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
                                 OUR MISSION & METHODOLOGY
                             </button>
-                            <button onClick={() => handleMenuClick("/study-program-certification")} className="block w-full px-4 py-2 text-left hover:text-red-600">
+                            <button onClick={() => handleMenuClick("/study-program-certification")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
                                 OUR PROGRAM
                             </button>
-                            <button onClick={() => handleMenuClick("/meet-our-team")} className="block w-full px-4 py-2 text-left hover:text-red-600">
+                            <button onClick={() => handleMenuClick("/meet-our-team")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
                                 MEET OUR TEAM
                             </button>
-                            <button onClick={() => handleMenuClick("/faq")} className="block w-full px-4 py-2 text-left hover:text-red-600">
+                            <button onClick={() => handleMenuClick("/faq")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
                                 FREQUENTLY ASKED QUESTIONS
                             </button>
-                            <button onClick={() => handleMenuClick("/work-with-us")} className="block w-full px-4 py-2 text-left hover:text-red-600">
+                            <button onClick={() => handleMenuClick("/work-with-us")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
                                 WORK WITH US
                             </button>
                         </div>
@@ -119,7 +119,7 @@ const Header = () => {
 
             {/* Language Selector */}
             <div className="hidden md:flex items-center space-x-2 cursor-pointer" ref={languageMenuRef} onClick={toggleLanguageMenu}>
-                <span className="text-lg font-bold">{selectedLanguage}</span>
+                <span className="text-lg text-[#902923] font-bold">{selectedLanguage}</span>
                 <div className="w-2 h-2 bg-red-500 rounded-full"></div>
             </div>
 
@@ -128,15 +128,21 @@ const Header = () => {
                 <div className="absolute top-16 right-8 bg-white text-black rounded-md shadow-lg">
                     <button
                         onClick={() => changeLanguage("EN")}
-                        className="block w-full px-4 py-2 text-left hover:bg-gray-200"
+                        className="block w-full px-4 py-2 text-left hover:text-[#902923]"
                     >
                         EN
                     </button>
                     <button
                         onClick={() => changeLanguage("ES")}
-                        className="block w-full px-4 py-2 text-left hover:bg-gray-200"
+                        className="block w-full px-4 py-2 text-left hover:text-[#902923]"
                     >
                         ES
+                    </button>
+                    <button
+                        onClick={() => changeLanguage("RU")}
+                        className="block w-full px-4 py-2 text-left hover:text-[#902923]"
+                    >
+                        RU
                     </button>
                 </div>
             )}

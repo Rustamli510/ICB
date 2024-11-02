@@ -16,10 +16,9 @@ const Banner = () => {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover">
           <source src={BannerVideo} type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
       </div>
-      <div className="relative text-white p-4">
+      <div className="relative text-[#902923] p-4">
         <h1 className="text-4xl md:text-6xl font-bold">
           {t('banner.welcome')}
         </h1>

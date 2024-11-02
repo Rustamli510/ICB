@@ -68,7 +68,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-2">Let's keep in touch!</h3>
           <p>If you don’t want to miss any of our news, exclusive offers, activities and special events, subscribe to our Newsletter!</p>
-          <button className="inline mt-4 mb-2 py-2 px-6 bg-[#f9423a] text-gray-900 font-semibold rounded-md hover:bg-[#f81e15] transition-all">SUBSCRIBE</button>
+          <button className="inline mt-4 mb-2 py-2 px-6 bg-[#902923]  text-gray-900 font-semibold rounded-md hover:scale-105 transition-all">SUBSCRIBE</button>
         </div>
       </div>
 
