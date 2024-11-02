@@ -2,9 +2,9 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <section className=" w-full bg-cover bg-center relative" style={{ backgroundImage: `url('../../assests/images/footer-1.webp')` }}>
+    <section className=" w-full bg-[#B9BAA3]">
       <div className="bg-black bg-opacity-50 flex items-center justify-center">
-        <div className="container mx-auto p-4 lg:px-0 flex flex-col lg:flex-row items-center lg:items-start">
+        <div className="container mx-auto p-4 lg:px-0 flex flex-col lg:flex-row items-center lg:items-start lg:space-x-14">
           <div className="lg:w-1/2 text-white p-4 lg:pr-10">
             <h1 className="text-4xl font-semibold mb-20">Invest in your studies at a quality institution</h1>
             <p className="text-2xl mb-40">Contact us and start planning your education in Spain. Start being part of the #NLCollegeCommunity</p>
@@ -15,7 +15,7 @@ const ContactForm = () => {
             </div>
           </div>
           
-          <div className="lg:w-1/2 p-6 mt-8 mb-10 lg:mt-0">
+          <div className="lg:w-[500px] p-6 mt-8 mb-10 lg:mt-0">
             <form className="space-y-4">
               <input type="text" placeholder="Full name *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
               <input type="email" placeholder="E-mail *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />

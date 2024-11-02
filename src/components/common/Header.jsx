@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -10,6 +10,10 @@ const Header = () => {
     const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
     const [isAboutDropdownOpenMobile, setIsAboutDropdownOpenMobile] = useState(false);
     const navigate = useNavigate();
+
+    // References for dropdowns
+    const aboutDropdownRef = useRef(null);
+    const languageMenuRef = useRef(null);
 
     const toggleLanguageMenu = () => {
         setIsLanguageOpen(!isLanguageOpen);
@@ -34,8 +38,24 @@ const Header = () => {
         document.body.style.overflow = "auto";
     };
 
+    // Close dropdown when clicking outside
     useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                aboutDropdownRef.current && !aboutDropdownRef.current.contains(event.target)
+            ) {
+                setIsAboutDropdownOpen(false);
+            }
+            if (
+                languageMenuRef.current && !languageMenuRef.current.contains(event.target)
+            ) {
+                setIsLanguageOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
         return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
             document.body.style.overflow = "auto";
         };
     }, []);
@@ -52,53 +72,53 @@ const Header = () => {
             {/* Desktop Navbar */}
             <nav className="hidden md:flex items-center space-x-8 relative">
                 {/* About Us Dropdown */}
-                <div className="relative">
+                <div className="relative" ref={aboutDropdownRef}>
                     <button
                         onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
-                        className="text-sm md:text-md font-bold hover:text-yellow-500 focus:outline-none"
+                        className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500 focus:outline-none"
                     >
                         {t('navbar.aboutUs').toUpperCase()}
                     </button>
                     {isAboutDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-48 bg-white text-black rounded shadow-lg z-20">
-                            <button onClick={() => handleMenuClick("/our-mission")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-white text-black rounded shadow-lg z-20">
+                            <button onClick={() => handleMenuClick("/our-mission")} className="block w-full px-4 py-2 text-left hover:text-red-600">
                                 OUR MISSION & METHODOLOGY
                             </button>
-                            <button onClick={() => handleMenuClick("/study-program-certification")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                            <button onClick={() => handleMenuClick("/study-program-certification")} className="block w-full px-4 py-2 text-left hover:text-red-600">
                                 OUR PROGRAM
                             </button>
-                            <button onClick={() => handleMenuClick("/meet-our-team")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                            <button onClick={() => handleMenuClick("/meet-our-team")} className="block w-full px-4 py-2 text-left hover:text-red-600">
                                 MEET OUR TEAM
                             </button>
-                            <button onClick={() => handleMenuClick("/faq")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                            <button onClick={() => handleMenuClick("/faq")} className="block w-full px-4 py-2 text-left hover:text-red-600">
                                 FREQUENTLY ASKED QUESTIONS
                             </button>
-                            <button onClick={() => handleMenuClick("/work-with-us")} className="block w-full px-4 py-2 text-left hover:bg-gray-200">
+                            <button onClick={() => handleMenuClick("/work-with-us")} className="block w-full px-4 py-2 text-left hover:text-red-600">
                                 WORK WITH US
                             </button>
                         </div>
                     )}
                 </div>
 
-                <Link to="/spanish-course" className="text-sm md:text-md font-bold hover:text-yellow-500">
+                <Link to="/spanish-course" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
                     {t('navbar.courses').toUpperCase()}
                 </Link>
-                <Link to="/prices-catalogues" className="text-sm md:text-md font-bold hover:text-yellow-500">
+                <Link to="/prices-catalogues" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
                     {t('navbar.prices').toUpperCase()}
                 </Link>
-                <Link to="/student-life" className="text-sm md:text-md font-bold hover:text-yellow-500">
+                <Link to="/student-life" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
                     {t('navbar.studentLife').toUpperCase()}
                 </Link>
-                <Link to="/contact-us" className="text-sm md:text-md font-bold hover:text-yellow-500">
+                <Link to="/contact-us" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
                     {t('navbar.contactUs').toUpperCase()}
                 </Link>
-                <Link to="/terms-conditions" className="text-sm md:text-md font-bold hover:text-yellow-500">
+                <Link to="/terms-conditions" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
                     {t('navbar.termsConditions').toUpperCase()}
                 </Link>
             </nav>
 
             {/* Language Selector */}
-            <div className="hidden md:flex items-center space-x-2 cursor-pointer" onClick={toggleLanguageMenu}>
+            <div className="hidden md:flex items-center space-x-2 cursor-pointer" ref={languageMenuRef} onClick={toggleLanguageMenu}>
                 <span className="text-lg font-bold">{selectedLanguage}</span>
                 <div className="w-2 h-2 bg-red-500 rounded-full"></div>
             </div>

@@ -9,13 +9,14 @@
 
 .custom-prev-arrow{
     position: absolute;
-    top: 100%;
+    top: 110%;
     left: 45%;
     cursor: pointer;
 }
 
 .custom-next-arrow{
     position: absolute;
+    top: 110%;
     left: 55%;
     cursor: pointer;
 }

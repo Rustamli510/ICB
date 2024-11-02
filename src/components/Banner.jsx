@@ -19,7 +19,7 @@ const Banner = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="relative text-white p-4 z-10">
+      <div className="relative text-white p-4">
         <h1 className="text-4xl md:text-6xl font-bold">
           {t('banner.welcome')}
         </h1>
