@@ -41,16 +41,16 @@ const Header = () => {
     }, []);
 
     return (
-        <header className="w-full fixed top-0 left-0 z-10 bg-gradient-to-r from-gray-800 to-blue-900 text-white py-4 px-8 flex items-center justify-between">
+        <header className="w-full absolute top-0 left-0 z-10 bg-transparant text-white py-8 px-8 flex items-center justify-between">
             {/* Logo */}
             <div className="text-xl font-bold">
                 <Link to="/">
-                    <img src="/path/to/logo.png" alt="NL College Logo" className="h-8" /> {/* Adjust logo path and height */}
+                    <img src="/path/to/logo.png" alt="NL College Logo" className="h-8" />
                 </Link>
             </div>
 
             {/* Desktop Navbar */}
-            <nav className="hidden md:flex space-x-8 relative">
+            <nav className="hidden md:flex items-center space-x-8 relative">
                 {/* About Us Dropdown */}
                 <div className="relative">
                     <button

@@ -89,7 +89,7 @@ const LearningLanguage = () => {
         ]
     };
     return (
-        <div className="py-10 px-5 overflow-hidden">
+        <div className="py-20 px-5 overflow-hidden">
             <Slider {...settings}>
                 {logos.map((logo, index) => (
                     <div key={index} className="p-3">

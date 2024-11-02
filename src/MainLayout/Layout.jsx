@@ -12,11 +12,13 @@ import StudentLife from "../pages/StudentLife";
 import TermsAndConditions from "../pages/TermsAndConditions";
 import ContactUs from "../pages/ContactUs";
 import OurProgram from "../pages/OurProgram";
+import ScrollToTop from "../components/function/ScrollToTop";
 
 function Layout() {
     return (
         <>
             <Header />
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/our-mission" element={<OurMission />} />
