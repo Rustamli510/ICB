@@ -12,7 +12,7 @@ const MeetOurTeam = () => {
         <>
             <section className="w-full mb-10">
                 {/* Background Image and Overlay */}
-                <div className="relative w-full h-44 bg-cover bg-center overflow-hidden mb-8" style={{ backgroundImage: `url('/path/to/your/image.jpg')` }}>
+                <div className="relative w-full h-44 bg-cover bg-center overflow-hidden mb-8" style={{ backgroundImage: `url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')` }}>
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                         <h1 className="text-white text-3xl md:text-4xl mt-16 text-center font-bold">Meet Our Team</h1>
                     </div>

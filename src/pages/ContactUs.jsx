@@ -4,16 +4,16 @@ const ContactUs = () => {
     return (
         <div className="mx-auto">
             {/* Image Section */}
-            <div className="relative w-full h-40 md:h-44 bg-cover bg-center" style={{ backgroundImage: 'url("/path/to/your/image.jpg")' }}>
+            <div className="relative w-full h-40 md:h-44 bg-cover bg-center" style={{ backgroundImage: 'url("src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg")' }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <h2 className="absolute inset-0 mt-16 flex items-center justify-center text-white text-3xl md:text-4xl font-bold">
                     Contact Us
                 </h2>
             </div>
 
-            <div className="container mx-auto">
+            <div className="mx-auto bg-gray-800">
                 {/* Content Section */}
-                <div className="flex flex-col md:flex-row bg-gray-800 text-white p-8 md:p-12 space-y-6 md:space-y-0 md:space-x-8">
+                <div className="max-w-7xl flex flex-col md:flex-row text-white p-8 md:p-12 space-y-6 md:space-y-0 md:space-x-8 mx-auto">
                     {/* Left Text */}
                     <div className="flex-1 text-4xl md:text-5xl font-bold">
                         <p>We want to hear from</p>
@@ -34,8 +34,8 @@ const ContactUs = () => {
                     </div>
                 </div>
 
-                <div className="mx-auto">
-                    <div className="flex flex-col md:flex-row items-center bg-gray-900 text-white p-8 space-y-6 md:space-y-0 md:space-x-8">
+                <div className="mx-auto bg-gray-900">
+                    <div className="flex flex-col md:flex-row items-center text-white p-8 space-y-6 md:space-y-0 md:space-x-8 max-w-7xl mx-auto">
 
                         {/* Left Side Text */}
                         <div className="flex-1">

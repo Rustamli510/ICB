@@ -3,9 +3,10 @@
       "aboutUs": "ABOUT US",
       "courses": "COURSES",
       "prices": "PRICES & CATALOGUES",
+      "visa": "VISA",
+      "accommodation": "ACCOMMODATION",
       "studentLife": "STUDENT LIFE",
-      "contactUs": "CONTACT US",
-      "termsConditions": "TERMS AND CONDITIONS"
+      "contactUs": "CONTACT US"
     },
     "banner": {
         "welcome": "Live, learn & Speak!",

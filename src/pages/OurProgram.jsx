@@ -4,7 +4,7 @@ const OurProgram = () => {
     return (
         <section>
             {/* Image Section */}
-            <div className="relative w-full h-40 md:h-44 bg-cover bg-center" style={{ backgroundImage: 'url("/path/to/your/image.jpg")' }}>
+            <div className="relative w-full h-40 md:h-44 bg-cover bg-center" style={{ backgroundImage: 'url("src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg")' }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl md:text-4xl mt-16 font-bold">
                     Our Program

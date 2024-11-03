@@ -25,7 +25,7 @@ const FAQ = () => {
         <section className="bg-white">
             <div className="mx-auto">
                 {/* Background Image with Overlay Text */}
-                <div className="relative h-48 md:h-48 lg:h-52 w-full bg-cover bg-center flex items-center justify-center mb-8 bg-gray-600" style={{ backgroundImage: "url('/path/to/your/background-image.jpg')" }}>
+                <div className="relative h-48 md:h-48 lg:h-52 w-full bg-cover bg-center flex items-center justify-center mb-8 bg-gray-600" style={{ backgroundImage: "url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')" }}>
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-16">Frequently Asked Questions</h1>
                 </div>
 

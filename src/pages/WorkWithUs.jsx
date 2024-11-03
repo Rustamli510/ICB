@@ -5,16 +5,16 @@ const WorkWithUs = () => {
     return (
         <section className="w-full">
             {/* Background Image and Overlay */}
-            <div className="relative w-full h-44 bg-cover bg-center overflow-hidden mb-8" style={{ backgroundImage: `url('/path/to/your/image.jpg')` }}>
+            <div className="relative w-full h-44 bg-cover bg-center overflow-hidden mb-8" style={{ backgroundImage: `url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')` }}>
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <h1 className="text-white text-3xl md:text-4xl mt-16 text-center font-bold">Work with us</h1>
                 </div>
             </div>
 
-            <section className="max-w-7xl mx-auto py-16 px-4 lg:px-8">
-                <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-16">
+            <section className="max-w-7xl mx-auto py-16 px-4 lg:px-0">
+                <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0">
                     {/* Left Column - Heading */}
-                    <div className="flex-shrink-0 lg:w-1/3 text-center lg:text-left">
+                    <div className="flex-shrink-0 lg:w-1/2 text-center lg:text-left">
                         <h1 className="text-6xl font-bold text-gray-900">
                             We're <span className="text-red-500">hiring!</span>
                         </h1>
@@ -22,7 +22,7 @@ const WorkWithUs = () => {
                     </div>
 
                     {/* Right Column - Description, Button, and List */}
-                    <div className="lg:w-2/3 text-center lg:text-left">
+                    <div className="lg:w-1/2 text-center lg:text-left ml-0">
                         <p className="text-gray-700 text-xl mb-6">
                             Are you looking for new opportunities? We’re always looking for new talent. If you’re a professional in the Teaching, Administration or Marketing field, come and say Hi!
                         </p>
@@ -53,7 +53,7 @@ const WorkWithUs = () => {
             </section>
 
             {/* Main Content */}
-            <div className="flex max-w-[1240px] mx-auto flex-col md:flex-row justify-between items-start px-8 lg:px-0">
+            <div className="flex max-w-7xl mx-auto flex-col md:flex-row justify-between items-start px-8 lg:px-0">
                 {/* Left Side */}
                 <div className="md:w-1/2 mb-8 md:mb-0">
                     <h2 className="text-4xl md:text-5xl font-bold">
@@ -103,7 +103,7 @@ const WorkWithUs = () => {
                 </div>
 
                 {/* Application Form */}
-                <form className="w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-md text-white my-10 md:ml-8">
+                <form className="w-full max-w-2xl bg-gray-800 p-6 rounded-lg shadow-md text-white my-10 md:ml-8">
                     <h2 className="text-2xl font-semibold text-red-500 mb-4">Your details</h2>
 
                     <div className="space-y-4">
@@ -139,11 +139,11 @@ const WorkWithUs = () => {
                         <label className="text-gray-400">Preferred Campus</label>
                         <div className="flex items-center space-x-4 mt-2">
                             <label className="flex items-center space-x-2">
-                                <input type="radio" name="campus" className="text-red-500" />
+                                <input type="radio" name="campus" className="cursor-pointer" style={{ accentColor: '#902923'}} />
                                 <span>Barcelona</span>
                             </label>
                             <label className="flex items-center space-x-2">
-                                <input type="radio" name="campus" className="text-red-500" />
+                                <input type="radio" name="campus" className="cursor-pointer" style={{ accentColor: '#902923'}} />
                                 <span>Madrid</span>
                             </label>
                         </div>
@@ -155,7 +155,7 @@ const WorkWithUs = () => {
                     />
 
                     <div className="flex items-center mt-4 space-x-2">
-                        <input type="checkbox" className="text-red-500" />
+                        <input type="checkbox" className="cursor-pointer" style={{ accentColor: '#902923'}} />
                         <label className="text-sm text-gray-400">
                             I have read and accept the <span className="text-red-500">NL College Privacy Policy, Terms & Conditions, Cancellation Policy,</span> and <span className="text-red-500">Cookies Policy.</span>
                         </label>

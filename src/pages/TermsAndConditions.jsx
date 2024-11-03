@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto p-4">
+            <div className="container max-w-7xl mx-auto p-4">
                 {/* Title Section */}
                 <div className="mt-6 text-center">
                     <h1 className="text-3xl font-bold">
