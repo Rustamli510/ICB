@@ -20,7 +20,7 @@ const levelsData = [
     {
         title: "B2: ADVANCED",
         description: "From B2.1 to B2.2\nOfficial DELE B2 Diploma\n\nYou will be able to interact with native speakers with more confidence with a strong foundation that allows speaking on different subjects.",
-        bgColor: "bg-orange-500",
+        bgColor: "bg-[#902923]",
     },
     {
         title: "C1: Domain",
@@ -41,32 +41,32 @@ const CatalanCourse = () => {
                 <div className="absolute w-full h-[230px] top-0 left-0 bg-gray-400">
                     <img src="src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg" alt="Header Background" className="w-full h-full object-cover" />
                 </div>
-                <div className="relative mt-[250px] text-center lg:text-left max-w-md lg:max-w-lg mb-8 lg:mb-0">
+                <div className="relative mt-[250px] lg:text-left max-w-md lg:max-w-lg mb-8 lg:mb-0">
                     <h2 className="text-3xl lg:text-7xl font-bold">
                         The time to <br />
-                        learn is <span className="text-orange-500">now</span>
+                        learn is <span className="text-[#902923]">now</span>
                     </h2>
                     <div className="mt-6 space-y-4">
-                        <Link to="#" className="text-orange-500 font-medium flex items-center space-x-2 hover:underline">
+                        <Link to="/spanish-course" className="text-[#902923] font-medium flex items-center space-x-2 hover:underline">
                             <span>&#x2192;</span>
                             <span>Spanish</span>
                         </Link>
-                        <Link to="#" className="text-orange-500 font-medium flex items-center space-x-2 hover:underline">
+                        <Link to="/english-course" className="text-[#902923] font-medium flex items-center space-x-2 hover:underline">
                             <span>&#x2192;</span>
                             <span>English</span>
                         </Link>
-                        <Link to="#" className="text-orange-500 font-medium flex items-center space-x-2 hover:underline">
+                        <Link to="/russian-course" className="text-[#902923] font-medium flex items-center space-x-2 hover:underline">
                             <span>&#x2192;</span>
-                            <span>DELE, CCSE & SIELE preparation</span>
+                            <span>Russian</span>
                         </Link>
                     </div>
                 </div>
-                <div className="relative mt-[250px] text-gray-700 max-w-md lg:max-w-xl text-sm lg:text-base leading-relaxed">
+                <div className="relative lg:mt-[250px] text-gray-700 max-w-md lg:max-w-xl text-sm lg:text-base leading-relaxed">
                     <p className="mb-4">
                         Thank you for considering NL College for your language learning adventure. We understand that every student has unique needs and goals when it comes to language learning. That’s why we offer a range of Spanish and English courses to cater to your individual needs.
                     </p>
                     <p className="mb-4">
-                        Our courses are designed to meet the needs of individuals with varying proficiency levels, ranging from A1 (basic) to C2 (proficiency). If you're already familiar with the language, you're welcome to join any of our existing groups, which start every Monday. However, if you're just starting, no worries at all. We have multiple starting dates available that you can check out <a href="#" className="text-orange-500 hover:underline">here</a>.
+                        Our courses are designed to meet the needs of individuals with varying proficiency levels, ranging from A1 (basic) to C2 (proficiency). If you're already familiar with the language, you're welcome to join any of our existing groups, which start every Monday. However, if you're just starting, no worries at all. We have multiple starting dates available that you can check out here.
                     </p>
                     <p className="mb-4">
                         Our team of dedicated language experts is committed to delivering the best language education to our students. In addition to our regular courses, we also offer exam preparation courses that will help you excel in your language exams.
@@ -78,38 +78,38 @@ const CatalanCourse = () => {
             </section>
             <section className="flex flex-col lg:flex-row bg-gray-900 text-gray-100 px-4 lg:px-24 py-12 lg:py-24">
                 <div className="lg:w-1/2 mb-8 lg:mb-0">
-                    <h3 className="text-orange-500 text-3xl font-bold mb-6">ACCELERATED</h3>
+                    <h3 className="text-[#902923] text-3xl font-bold mb-6">ACCELERATED</h3>
                     <div className="space-y-4 text-sm lg:text-base">
                         <div>
-                            <p className="font-semibold text-orange-500">Schedule</p>
+                            <p className="font-semibold text-[#902923]">Schedule</p>
                             <p>20h per week &nbsp; | &nbsp; 4 hours / day</p>
                         </div>
                         <div>
                             <p><span className="italic">Barcelona</span><br />
                                 9:30 - 1:30 pm &nbsp; | &nbsp; Mon to Fri*<br />
                                 2:00 - 6:00 pm &nbsp; | &nbsp; Mon to Fri*</p>
-                            <hr className="border-orange-500 my-2" />
+                            <hr className="border-[#902923] my-2" />
                             <p><span className="italic">Madrid</span><br />
                                 9:00 - 1:00 pm &nbsp; | &nbsp; Mon to Fri*<br />
                                 1:30 - 5:30 pm &nbsp; | &nbsp; Mon to Fri*</p>
                             <p className="text-xs mt-2">* depending on availability</p>
                         </div>
                         <div>
-                            <a href="#" className="text-orange-500 hover:underline flex items-center">
+                            <a href="#" className="text-[#902923] hover:underline flex items-center">
                                 <span>&#x25B6;</span>
                                 <span className="ml-2">See our calendar for start dates</span>
                             </a>
                         </div>
                         <div>
-                            <p className="font-semibold text-orange-500">Levels</p>
+                            <p className="font-semibold text-[#902923]">Levels</p>
                             <p>From A1 to C1</p>
                         </div>
                         <div>
-                            <p className="font-semibold text-orange-500">Price / month</p>
+                            <p className="font-semibold text-[#902923]">Price / month</p>
                             <p>€ 634</p>
                             <p className="text-xs mt-1">Remember: the more weeks you choose, the more discount you get!</p>
                         </div>
-                        <button className="bg-orange-500 text-gray-900 font-semibold py-3 px-6 mt-6 rounded-md hover:bg-orange-600">
+                        <button className="bg-[#902923] text-white font-semibold py-3 px-6 mt-6 rounded-md hover:scale-105">
                             I WANT TO KNOW MORE
                         </button>
                     </div>
@@ -125,10 +125,10 @@ const CatalanCourse = () => {
                     <p className="leading-relaxed text-sm lg:text-base mb-4">
                         The class is split into two parts, with a different native teacher for each slot and a short break in between. This means that you will enjoy two unique teaching styles and benefit from the expertise of two magnificent professors from the NL College teaching team. Join us today and accelerate your Spanish learning journey!
                     </p>
-                    <p className="text-orange-500 text-sm lg:text-base mt-4">This course meets the long-term VISA requirements</p>
+                    <p className="text-[#902923] text-sm lg:text-base mt-4">This course meets the long-term VISA requirements</p>
                 </div>
             </section>
-            <section className="py-16">
+            <section className="py-16 px-5 lg:px-0">
                 {/* Heading */}
                 <div className="max-w-7xl mx-auto text-center md:text-left mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">All about our Levels</h2>

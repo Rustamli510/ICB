@@ -23,7 +23,7 @@ const MeetOurTeam = () => {
                     {/* Left Side */}
                     <div className="md:w-1/2 mb-8 md:mb-0">
                         <h2 className="text-4xl md:text-5xl font-bold">
-                            Choose your own <span className="text-red-500">future</span>
+                            Choose your own <span className="text-[#902923]">future</span>
                         </h2>
                         <p className="text-lg md:text-xl mt-4">by learning a new language</p>
                     </div>
@@ -42,10 +42,10 @@ const MeetOurTeam = () => {
             <section className="bg-gray-800 text-white py-12 px-6 md:px-12">
                 <div className="max-w-screen-lg mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold">
-                        Meet our <span className="text-red-500">teachers</span>
+                        Meet our <span className="text-[#902923]">teachers</span>
                     </h2>
                     <p className="text-lg text-gray-300 mt-2">
-                        Barcelona <span className="text-red-500">Campus</span>
+                        Barcelona <span className="text-[#902923]">Campus</span>
                     </p>
                 </div>
                 <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-screen-lg mx-auto">

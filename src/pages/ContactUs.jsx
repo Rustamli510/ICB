@@ -11,17 +11,17 @@ const ContactUs = () => {
                 </h2>
             </div>
 
-            <div className="mx-auto bg-gray-800">
+            <div className="mx-auto">
                 {/* Content Section */}
-                <div className="max-w-7xl flex flex-col md:flex-row text-white p-8 md:p-12 space-y-6 md:space-y-0 md:space-x-8 mx-auto">
+                <div className="max-w-7xl flex flex-col md:flex-row text-black p-8 md:p-12 space-y-6 md:space-y-0 md:space-x-8 mx-auto">
                     {/* Left Text */}
                     <div className="flex-1 text-4xl md:text-5xl font-bold">
                         <p>We want to hear from</p>
-                        <p className="text-yellow-500">you!</p>
+                        <p className="text-[#902923]">you!</p>
                     </div>
 
                     {/* Right Text */}
-                    <div className="flex-1 text-gray-300">
+                    <div className="flex-1">
                         <p className="mb-4">
                             We understand that sometimes you may need some additional help or support, and we're here to make that process as easy and seamless as possible.
                         </p>
@@ -46,7 +46,7 @@ const ContactUs = () => {
                         </div>
 
                         {/* Right Side Form */}
-                        <div className="flex-1 bg-yellow-500 p-6 rounded-lg shadow-lg">
+                        <div className="flex-1 max-w-xl bg-[#902923] p-6 rounded-lg shadow-lg">
                             <form className="space-y-4">
                                 <input
                                     type="text"
@@ -76,13 +76,12 @@ const ContactUs = () => {
                                 </select>
 
                                 <div className="flex items-center space-x-4">
-                                    <span>Preferred Campus</span>
-                                    <label className="flex items-center">
-                                        <input type="radio" name="campus" value="Barcelona" className="mr-1" />
+                                    <label className="flex items-center ">
+                                        <input type="radio" name="campus" value="Barcelona" className="mr-1" style={{ accentColor: '#902923' }} />
                                         Barcelona
                                     </label>
                                     <label className="flex items-center">
-                                        <input type="radio" name="campus" value="Madrid" className="mr-1" />
+                                        <input type="radio" name="campus" value="Madrid" className="mr-1"  style={{ accentColor: '#902923' }}/>
                                         Madrid
                                     </label>
                                 </div>
@@ -94,7 +93,7 @@ const ContactUs = () => {
                                 ></textarea>
 
                                 <div className="flex items-center space-x-2">
-                                    <input type="checkbox" className="rounded focus:outline-none" required />
+                                    <input type="checkbox" className="rounded focus:outline-none" style={{ accentColor: '#902923' }} required />
                                     <label className="text-sm">
                                         I have read and accept the NL College Privacy Policy, Terms & Conditions, Cancellation Policy, and Cookies Policy.
                                     </label>
@@ -102,7 +101,7 @@ const ContactUs = () => {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-black text-white font-bold p-2 rounded-md hover:bg-gray-800"
+                                    className="w-full bg-black text-white hover:bg-white hover:text-[#902923] font-bold p-2 rounded-md"
                                 >
                                     SEND
                                 </button>

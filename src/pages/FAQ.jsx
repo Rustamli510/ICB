@@ -25,16 +25,18 @@ const FAQ = () => {
         <section className="bg-white">
             <div className="mx-auto">
                 {/* Background Image with Overlay Text */}
-                <div className="relative h-48 md:h-48 lg:h-52 w-full bg-cover bg-center flex items-center justify-center mb-8 bg-gray-600" style={{ backgroundImage: "url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')" }}>
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-16">Frequently Asked Questions</h1>
+                <div className="relative h-48 md:h-44 w-full bg-cover bg-center flex items-center justify-center mb-8 bg-gray-600" style={{ backgroundImage: "url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')" }}>
+                    <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h1 className="text-white text-3xl md:text-4xl mt-16 text-center font-bold">Frequently Askes Questions</h1>
+                    </div>
                 </div>
 
                 {/* Main Content */}
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:space-x-16">
+                <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:space-x-16">
                     {/* Left Side - Main Heading */}
                     <div className="flex-shrink-0 mb-8 md:mb-0">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
-                            Got any <span className="text-red-500">questions?</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
+                            Got any <span className="text-[#902923]">questions?</span>
                         </h2>
                     </div>
 
@@ -52,8 +54,8 @@ const FAQ = () => {
                     </div>
                 </div>
             </div>
-            <section className="max-w-7xl mx-auto py-20">
-                <h2 className="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+            <section className="max-w-6xl mx-auto py-20">
+                <h2 className="text-4xl font-semibold mb-6">Frequently Asked Questions</h2>
                 <div className="">
                     {faqData.map((faq, index) => (
                         <div key={index} className="bg-gray-100 shadow-md">

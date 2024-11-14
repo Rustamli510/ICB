@@ -10,7 +10,8 @@ const Header = () => {
     const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
     const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] = useState(false);
     const [isAboutDropdownOpenMobile, setIsAboutDropdownOpenMobile] = useState(false);
-    const [isCoursesDropdownOpenMobile, setIsCoursesDropdownOpenMobile] = useState(false); // New state for mobile courses dropdown
+    const [isCoursesDropdownOpenMobile, setIsCoursesDropdownOpenMobile] = useState(false);
+    const [priceModal, setpriceModal] = useState(false)
     const navigate = useNavigate();
 
     // References for dropdowns
@@ -39,7 +40,7 @@ const Header = () => {
         setIsAboutDropdownOpen(false);
         setIsCoursesDropdownOpen(false);
         setIsAboutDropdownOpenMobile(false);
-        setIsCoursesDropdownOpenMobile(false); // Close mobile courses dropdown when navigating
+        setIsCoursesDropdownOpenMobile(false);
         document.body.style.overflow = "auto";
     };
 
@@ -70,6 +71,14 @@ const Header = () => {
         };
     }, []);
 
+    //Open prices modal
+
+    const handleModal = () => {
+        setpriceModal(!priceModal);
+        setIsBurgerMenuOpen(false);
+        document.body.style.overflow = priceModal ? "auto" : "hidden";
+    };
+
     return (
         <header className="w-full absolute top-0 left-0 z-10 bg-transparent text-white py-8 px-8 flex items-center justify-between">
             {/* Logo */}
@@ -85,28 +94,28 @@ const Header = () => {
                 <div className="relative" ref={aboutDropdownRef}>
                     <button
                         onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
-                        className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500 focus:outline-none"
+                        className="text-sm md:text-md font-bold text-[#902923] hover:text-white focus:outline-none"
                     >
                         {t('navbar.aboutUs').toUpperCase()}
                     </button>
                     {isAboutDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-white text-black rounded shadow-lg z-20">
-                            <button onClick={() => handleMenuClick("/our-mission")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-white text-black rounded-md shadow-lg z-20">
+                            <button onClick={() => handleMenuClick("/our-mission")} className="block w-full  px-4 py-2 text-left hover:text-[#902923] border-b">
                                 Our Mission & Methodology
                             </button>
-                            <button onClick={() => handleMenuClick("/study-program-certification")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
+                            <button onClick={() => handleMenuClick("/study-program-certification")} className="block w-full px-4 py-2 text-left hover:text-[#902923] border-b">
                                 Our Program
                             </button>
-                            <button onClick={() => handleMenuClick("/meet-our-team")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
+                            <button onClick={() => handleMenuClick("/meet-our-team")} className="block w-full px-4 py-2 text-left hover:text-[#902923] border-b">
                                 Meet Our Team
                             </button>
-                            <button onClick={() => handleMenuClick("/faq")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
+                            <button onClick={() => handleMenuClick("/faq")} className="block w-full px-4 py-2 text-left hover:text-[#902923] border-b">
                                 Frequently Asked Questions
                             </button>
-                            <button onClick={() => handleMenuClick("/work-with-us")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
+                            <button onClick={() => handleMenuClick("/work-with-us")} className="block w-full px-4 py-2 text-left hover:text-[#902923] border-b">
                                 Work With Us
                             </button>
-                            <button onClick={() => handleMenuClick("/terms-conditions")} className="block w-full px-4 py-2 text-left hover:text-[#902923] ">
+                            <button onClick={() => handleMenuClick("/terms-conditions")} className="block w-full px-4 py-2 text-left hover:text-[#902923]">
                                 Terms and Conditions
                             </button>
                         </div>
@@ -117,19 +126,19 @@ const Header = () => {
                 <div className="relative" ref={coursesDropdownRef}>
                     <button
                         onClick={() => setIsCoursesDropdownOpen(!isCoursesDropdownOpen)}
-                        className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500 focus:outline-none"
+                        className="text-sm md:text-md font-bold text-[#902923] hover:text-white focus:outline-none"
                     >
                         {t('navbar.courses').toUpperCase()}
                     </button>
                     {isCoursesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-24 bg-white text-black rounded shadow-lg z-20">
-                            <button onClick={() => handleMenuClick("/english-course")} className="block w-full px-4 py-2 text-left hover:text-[#902923]">
+                        <div className="absolute top-full left-0 mt-2 w-24 bg-white text-black rounded-md shadow-lg z-20">
+                            <button onClick={() => handleMenuClick("/english-course")} className="block w-full px-4 py-2 text-left hover:text-[#902923] border-b">
                                 English
                             </button>
-                            <button onClick={() => handleMenuClick("/spanish-course")} className="block w-full px-4 py-2 text-left hover:text-[#902923]">
+                            <button onClick={() => handleMenuClick("/spanish-course")} className="block w-full px-4 py-2 text-left hover:text-[#902923] border-b">
                                 Spanish
                             </button>
-                            <button onClick={() => handleMenuClick("/russian-course")} className="block w-full px-4 py-2 text-left hover:text-[#902923]">
+                            <button onClick={() => handleMenuClick("/russian-course")} className="block w-full px-4 py-2 text-left hover:text-[#902923] border-b">
                                 Russian
                             </button>
                             <button onClick={() => handleMenuClick("/catalan-course")} className="block w-full px-4 py-2 text-left hover:text-[#902923]">
@@ -139,27 +148,27 @@ const Header = () => {
                     )}
                 </div>
 
-                <Link to="/prices-catalogues" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
+                <button onClick={handleModal} className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
                     {t('navbar.prices').toUpperCase()}
-                </Link>
-                <Link to="/visa" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
+                </button>
+                <Link to="/visa" className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
                     {t('navbar.visa').toUpperCase()}
                 </Link>
-                <Link to="/accommodation" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
+                <Link to="/accommodation" className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
                     {t('navbar.accommodation').toUpperCase()}
                 </Link>
-                <Link to="/student-life" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
+                <Link to="/student-life" className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
                     {t('navbar.studentLife').toUpperCase()}
                 </Link>
-                <Link to="/contact-us" className="text-sm md:text-md font-bold text-[#902923] hover:text-yellow-500">
+                <Link to="/contact-us" className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
                     {t('navbar.contactUs').toUpperCase()}
                 </Link>
             </nav>
 
             {/* Language Selector */}
             <div className="hidden md:flex items-center space-x-2 cursor-pointer" ref={languageMenuRef} onClick={toggleLanguageMenu}>
-                <span className="text-lg text-[#902923] font-bold">{selectedLanguage}</span>
-                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                <span className="text-lg text-[#902923] hover:text-white font-bold">{selectedLanguage}</span>
+                <div className="w-2 h-2 bg-[#902923] rounded-full"></div>
             </div>
 
             {/* Language Menu Dropdown */}
@@ -186,6 +195,72 @@ const Header = () => {
                 </div>
             )}
 
+            {/* Price Modal */}
+            {priceModal && (
+                <div className="fixed inset-0 flex items-center justify-center z-50">
+                    {/* Modal backdrop */}
+                    <div
+                        className="fixed inset-0 bg-black opacity-50"
+                        onClick={handleModal} // Close modal when backdrop is clicked
+                    ></div>
+
+                    {/* Modal content */}
+                    <div className="relative bg-white p-4 sm:p-6 w-11/12 sm:w-[500px] md:w-[600px] lg:w-[700px] xl:w-[800px] rounded-lg shadow-lg text-black mx-auto">
+                        {/* Close button */}
+                        <button
+                            onClick={handleModal}
+                            className="absolute top-2 right-4 text-3xl text-[#902923] font-bold"
+                        >
+                            &times;
+                        </button>
+
+                        {/* Modal Header */}
+                        <h2 className="text-center text-[#902923] text-2xl sm:text-3xl lg:text-4xl font-semibold mb-2">
+                            Download
+                        </h2>
+                        <p className="text-center text-lg sm:text-xl lg:text-2xl mb-6">
+                            our price list and catalogue
+                        </p>
+
+                        {/* Download Options */}
+                        <div className="flex flex-col sm:flex-row justify-around items-center">
+                            {/* Price List */}
+                            <div className="flex flex-col items-center mb-4 sm:mb-0">
+                                <img
+                                    src="/path/to/price-list.png"
+                                    alt="Price List"
+                                    className="w-20 h-28 sm:w-24 sm:h-32 mb-2"
+                                />
+                                <a
+                                    href="/path/to/price-list-download.pdf"
+                                    download
+                                    className="text-center font-semibold text-sm text-[#902923] hover:underline"
+                                >
+                                    Price List
+                                </a>
+                            </div>
+
+                            {/* Brochure */}
+                            <div className="flex flex-col items-center mb-4 sm:mb-0">
+                                <img
+                                    src="/path/to/brochure.png"
+                                    alt="Brochure"
+                                    className="w-20 h-28 sm:w-24 sm:h-32 mb-2"
+                                />
+                                <a
+                                    href="/path/to/brochure-download.pdf"
+                                    download
+                                    className="text-center font-semibold text-sm text-[#902923] hover:underline"
+                                >
+                                    Brochure
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+
             {/* Burger Menu Button (Visible on Mobile) */}
             <button
                 onClick={toggleBurgerMenu}
@@ -207,30 +282,30 @@ const Header = () => {
                     <div className="relative">
                         <button
                             onClick={() => setIsAboutDropdownOpenMobile(!isAboutDropdownOpenMobile)}
-                            className="text-lg font-bold hover:text-red-500 focus:outline-none"
+                            className="text-lg font-bold hover:text-[#902923] focus:outline-none"
                         >
-                            {t('navbar.aboutUs').toUpperCase()}
+                            {t('navbar.aboutUs')}
                         </button>
                         {isAboutDropdownOpenMobile && (
                             <div className="flex flex-col items-center mt-2 space-y-2 transition-all capitalize">
-                                <button onClick={() => handleMenuClick("/our-mission")} className="text-sm hover:text-yellow-500">
+                                <button onClick={() => handleMenuClick("/our-mission")} className="text-sm hover:text-[#902923]">
                                     Our Mission & Methodology
                                 </button>
-                                <button onClick={() => handleMenuClick("/study-program-certification")} className="text-sm hover:text-yellow-500">
+                                <button onClick={() => handleMenuClick("/study-program-certification")} className="text-sm hover:text-[#902923]">
                                     Our Program
                                 </button>
-                                <button onClick={() => handleMenuClick("/meet-our-team")} className="text-sm hover:text-yellow-500">
+                                <button onClick={() => handleMenuClick("/meet-our-team")} className="text-sm hover:text-[#902923]">
                                     Meet Our Team
                                 </button>
-                                <button onClick={() => handleMenuClick("/faq")} className="text-sm hover:text-yellow-500">
+                                <button onClick={() => handleMenuClick("/faq")} className="text-sm hover:text-[#902923]">
                                     Frequently Asked Questions
                                 </button>
-                                <button onClick={() => handleMenuClick("/work-with-us")} className="text-sm hover:text-yellow-500">
+                                <button onClick={() => handleMenuClick("/work-with-us")} className="text-sm hover:text-[#902923]">
                                     Work With Us
                                 </button>
-                                <button onClick={() => handleMenuClick("/terms-conditions")} className="text-sm hover:text-yellow-500">
-                                Terms and Conditions
-                            </button>
+                                <button onClick={() => handleMenuClick("/terms-conditions")} className="text-sm hover:text-[#902923]">
+                                    Terms and Conditions
+                                </button>
                             </div>
                         )}
                     </div>
@@ -239,36 +314,36 @@ const Header = () => {
                     <div className="relative">
                         <button
                             onClick={() => setIsCoursesDropdownOpenMobile(!isCoursesDropdownOpenMobile)}
-                            className="text-lg font-bold hover:text-red-500 focus:outline-none"
+                            className="text-lg font-bold hover:text-[#902923] focus:outline-none"
                         >
-                            {t('navbar.courses').toUpperCase()}
+                            {t('navbar.courses')}
                         </button>
                         {isCoursesDropdownOpenMobile && (
                             <div className="flex flex-col items-center mt-2 space-y-2 transition-all">
-                                <button onClick={() => handleMenuClick("/courses/english")} className="text-sm hover:text-red-500">
+                                <button onClick={() => handleMenuClick("/english-course")} className="text-sm hover:text-[#902923]">
                                     English
                                 </button>
-                                <button onClick={() => handleMenuClick("/courses/spanish")} className="text-sm hover:text-yellow-500">
+                                <button onClick={() => handleMenuClick("/spanish-course")} className="text-sm hover:text-[#902923]">
                                     Spanish
                                 </button>
-                                <button onClick={() => handleMenuClick("/courses/russian")} className="text-sm hover:text-yellow-500">
+                                <button onClick={() => handleMenuClick("/russian-course")} className="text-sm hover:text-[#902923]">
                                     Russian
                                 </button>
-                                <button onClick={() => handleMenuClick("/courses/catalan")} className="text-sm hover:text-yellow-500">
+                                <button onClick={() => handleMenuClick("/catalan-course")} className="text-sm hover:text-[#902923]">
                                     Catalan
                                 </button>
                             </div>
                         )}
                     </div>
 
-                    <button onClick={() => handleMenuClick("/prices-catalogues")} className="text-lg font-bold hover:text-yellow-500">
-                        {t('navbar.prices').toUpperCase()}
+                    <button onClick={handleModal} className="text-lg font-bold hover:text-[#902923]">
+                        {t('navbar.prices')}
                     </button>
-                    <button onClick={() => handleMenuClick("/student-life")} className="text-lg font-bold hover:text-yellow-500">
-                        {t('navbar.studentLife').toUpperCase()}
+                    <button onClick={() => handleMenuClick("/student-life")} className="text-lg font-bold hover:text-[#902923]">
+                        {t('navbar.studentLife')}
                     </button>
-                    <button onClick={() => handleMenuClick("/contact-us")} className="text-lg font-bold hover:text-yellow-500">
-                        {t('navbar.contactUs').toUpperCase()}
+                    <button onClick={() => handleMenuClick("/contact-us")} className="text-lg font-bold hover:text-[#902923]">
+                        {t('navbar.contactUs')}
                     </button>
                 </div>
             )}

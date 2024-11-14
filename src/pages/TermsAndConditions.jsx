@@ -4,13 +4,13 @@ const TermsAndConditions = () => {
     return (
         <section>
             {/* Image Section */}
-            <div className="w-full h-40 bg-gray-200 flex items-center justify-center">
-                <div className="mt-16">
-                    <p className="text-center text-gray-500 text-4xl">Terms and Conditions</p>
+            <div className="relative h-48 md:h-44 w-full bg-cover bg-center flex items-center justify-center mb-8 bg-gray-600" style={{ backgroundImage: "url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')" }}>
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <h1 className="text-white text-3xl md:text-4xl mt-16 text-center font-bold">Terms and Conditions</h1>
                 </div>
             </div>
 
-            <div className="container max-w-7xl mx-auto p-4">
+            <div className="container max-w-6xl mx-auto p-4">
                 {/* Title Section */}
                 <div className="mt-6 text-center">
                     <h1 className="text-3xl font-bold">

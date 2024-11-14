@@ -1,6 +1,10 @@
 import React from "react";
 import ExploreSection from "../components/repeated/ExploreSection";
 
+//Images
+import Pic from '../assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg'
+
+
 const Accommodation = () => {
     return (
         <section className="bg-gray-900 text-white">
@@ -18,7 +22,7 @@ const Accommodation = () => {
                     {/* Left Side - Main Heading */}
                     <div className="mb-8 md:mb-0">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-                            Make yourself <span className="text-yellow-500">at home!</span>
+                            Make yourself <span className="text-[#902923]">at home!</span>
                         </h2>
                     </div>
 
@@ -39,13 +43,13 @@ const Accommodation = () => {
                 {/* Image Gallery Section */}
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="rounded-lg overflow-hidden shadow-lg">
-                        <img src="/path/to/accommodation-image1.jpg" alt="Accommodation 1" className="w-full h-full object-cover" />
+                        <img src={Pic} alt="Accommodation 1" className="w-full h-full object-cover" />
                     </div>
                     <div className="rounded-lg overflow-hidden shadow-lg">
-                        <img src="/path/to/accommodation-image2.jpg" alt="Accommodation 2" className="w-full h-full object-cover" />
+                        <img src={Pic} alt="Accommodation 2" className="w-full h-full object-cover" />
                     </div>
                     <div className="rounded-lg overflow-hidden shadow-lg">
-                        <img src="/path/to/accommodation-image3.jpg" alt="Accommodation 3" className="w-full h-full object-cover" />
+                        <img src={Pic} alt="Accommodation 3" className="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>

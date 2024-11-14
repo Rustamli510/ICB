@@ -26,14 +26,14 @@ const ContactForm = () => {
           {/* Right Form Content */}
           <div className="lg:w-[500px] p-6 mt-8 mb-10 lg:mt-0 relative">
             <form className="space-y-4">
-              <input type="text" placeholder="Full name *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
-              <input type="email" placeholder="E-mail *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
-              <input type="text" placeholder="Telephone number / Whatsapp *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500" />
-              <select className="w-full cursor-pointer p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
+              <input type="text" placeholder="Full name *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-[#902923]" />
+              <input type="email" placeholder="E-mail *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-[#902923]" />
+              <input type="text" placeholder="Telephone number / Whatsapp *" className="w-full p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-[#902923]" />
+              <select className="w-full cursor-pointer p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-[#902923]">
                 <option>Country *</option>
                 {/* Add other countries */}
               </select>
-              <select className="w-full cursor-pointer p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
+              <select className="w-full cursor-pointer p-3 rounded-3xl border border-gray-300 focus:outline-none focus:ring focus:ring-[#902923]">
                 <option>Nationality *</option>
                 {/* Add other nationalities */}
               </select>
@@ -47,7 +47,7 @@ const ContactForm = () => {
                   <span className='text-white'>Madrid</span>
                 </label>
               </div>
-              <textarea placeholder="Message" className="w-full p-3 min-h-24 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500"></textarea>
+              <textarea placeholder="Message" className="w-full p-3 min-h-24 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-[#902923]"></textarea>
               <div className="flex items-center">
                 <input type="checkbox" className="cursor-pointer" style={{ accentColor: '#902923' }} />
                 <p className="text-xs ml-2 text-white">

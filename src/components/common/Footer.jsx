@@ -46,19 +46,19 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-2">Follow us on social Media</h3>
           <p>We have fun over here!</p>
           <div className="flex space-x-4 text-xl">
-            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#f9423a] rounded-full">
+            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#902923] rounded-full">
               <FaInstagram />
             </Link>
-            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#f9423a] rounded-full">
+            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#902923] rounded-full">
               <FaYoutube />
             </Link>
-            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#f9423a] rounded-full">
+            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#902923] rounded-full">
               <FaLinkedin />
             </Link>
-            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#f9423a] rounded-full">
+            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#902923] rounded-full">
               <FaFacebook />
             </Link>
-            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#f9423a] rounded-full">
+            <Link className="hover:mt-4 hover:bg-[#f81e15] transition-all text-gray-800 flex items-center justify-center mt-6 w-9 h-9 bg-[#902923] rounded-full">
               <FaTiktok />
             </Link>
           </div>
@@ -68,7 +68,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-2">Let's keep in touch!</h3>
           <p>If you don’t want to miss any of our news, exclusive offers, activities and special events, subscribe to our Newsletter!</p>
-          <button className="inline mt-4 mb-2 py-2 px-6 bg-[#902923]  text-gray-900 font-semibold rounded-md hover:scale-105 transition-all">SUBSCRIBE</button>
+          <button className="inline mt-4 mb-2 py-2 px-6 bg-[#902923] text-gray-900 font-semibold rounded-md hover:scale-105 transition-all">SUBSCRIBE</button>
         </div>
       </div>
 

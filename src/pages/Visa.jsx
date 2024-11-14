@@ -1,6 +1,4 @@
 import React from "react";
-import { FaArrowDownLong } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 import ExploreSection from "../components/repeated/ExploreSection";
 
 const helpCards = [
@@ -36,7 +34,7 @@ const Visa = () => {
                         {/* Left Side - Main Heading */}
                         <div className="mb-8 md:mb-0">
                             <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-gray-800 leading-tight">
-                                Let's make it <span className="text-yellow-500">easy</span>
+                                Let's make it <span className="text-[#902923]">easy</span>
                             </h2>
                         </div>
 
@@ -56,13 +54,13 @@ const Visa = () => {
                 <div className="max-w-7xl mx-auto">
                     {/* First Section */}
                     <div className="mb-16">
-                        <h2 className="text-xl md:text-2xl font-semibold text-yellow-500 mb-4">
+                        <h2 className="text-xl md:text-2xl font-semibold text-[#902923] mb-4">
                             First things first
                         </h2>
                         <div className="flex items-start space-x-4">
                             {/* Circle with line */}
                             <div className="flex flex-col items-center">
-                                <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
+                                <div className="w-4 h-4 rounded-full bg-[#902923]"></div>
                                 <div className="w-px h-full bg-gray-500 mt-2"></div>
                             </div>
                             {/* Content */}
@@ -79,7 +77,7 @@ const Visa = () => {
 
                     {/* Second Section */}
                     <div>
-                        <h2 className="text-xl md:text-2xl font-semibold text-yellow-500 mb-4">
+                        <h2 className="text-xl md:text-2xl font-semibold text-[#902923] mb-4">
                             Do have this in consideration
                         </h2>
                         <div className="space-y-8">
@@ -93,7 +91,7 @@ const Visa = () => {
                                 <div className="flex items-start space-x-4" key={index}>
                                     {/* Circle with line */}
                                     <div className="flex flex-col items-center">
-                                        <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
+                                        <div className="w-4 h-4 rounded-full bg-[#902923]"></div>
                                         {index < 3 && <div className="w-px h-full bg-gray-500 mt-2"></div>}
                                     </div>
                                     {/* Content */}
