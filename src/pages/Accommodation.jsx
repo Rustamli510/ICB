@@ -11,9 +11,9 @@ const Accommodation = () => {
             {/* Background Image with Overlay Text */}
             <div
                 className="relative h-44 bg-cover bg-center flex items-center justify-center"
-                style={{ backgroundImage: "url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')" }}
+                // style={{ backgroundImage: "url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')" }}
             >
-                <h1 className="text-3xl md:text-4xl font-bold mt-16 text-white">Accommodation</h1>
+                <h1 className="text-3xl md:text-4xl font-bold mt-24 text-white">Accommodation</h1>
             </div>
 
             {/* Content Section */}

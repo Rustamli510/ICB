@@ -4,10 +4,8 @@ const TermsAndConditions = () => {
     return (
         <section>
             {/* Image Section */}
-            <div className="relative h-48 md:h-44 w-full bg-cover bg-center flex items-center justify-center mb-8 bg-gray-600" style={{ backgroundImage: "url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')" }}>
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <h1 className="text-white text-3xl md:text-4xl mt-16 text-center font-bold">Terms and Conditions</h1>
-                </div>
+            <div className="relative h-48 md:h-44 w-full flex items-center justify-center mb-8 bg-gray-900">
+                    <h1 className="text-white text-3xl md:text-4xl mt-28 text-center font-bold">Terms and Conditions</h1>
             </div>
 
             <div className="container max-w-6xl mx-auto p-4">

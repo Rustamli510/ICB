@@ -5,10 +5,8 @@ const WorkWithUs = () => {
     return (
         <section className="w-full">
             {/* Background Image and Overlay */}
-            <div className="relative w-full h-44 bg-cover bg-center overflow-hidden mb-8" style={{ backgroundImage: `url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')` }}>
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <h1 className="text-white text-3xl md:text-4xl mt-16 text-center font-bold">Work with us</h1>
-                </div>
+            <div className="relative w-full h-44 overflow-hidden mb-8 bg-gray-900">
+                    <h1 className="text-white text-3xl md:text-4xl mt-28 text-center font-bold">Work with us</h1>
             </div>
 
             <section className="max-w-6xl mx-auto py-16 px-4 lg:px-0">

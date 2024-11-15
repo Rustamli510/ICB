@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 //Images
-import Logo from '../../assets/images/icb_b-removebg-preview.png'
+import RedLogo from '../../assets/images/icb_b-removebg-preview.png'
+import WhiteLogo from '../../assets/images/icb.png'
 
 const Header = () => {
     const { t, i18n } = useTranslation();
@@ -17,6 +18,10 @@ const Header = () => {
     const [isCoursesDropdownOpenMobile, setIsCoursesDropdownOpenMobile] = useState(false);
     const [priceModal, setpriceModal] = useState(false)
     const navigate = useNavigate();
+    const location = useLocation();
+
+    //Use Location
+    const isHomePage = location.pathname === "/";
 
     // References for dropdowns
     const aboutDropdownRef = useRef(null);
@@ -84,11 +89,11 @@ const Header = () => {
     };
 
     return (
-        <header className="w-full absolute top-0 left-0 z-10 bg-transparent text-white py-8 px-8 flex items-center justify-between">
+        <header className="w-full absolute -top-16 left-0 z-10 bg-transparent text-white py-8 px-8 flex items-center justify-between">
             {/* Logo */}
-            <div className="h-20 w-40">
+            <div className="w-40 h-auto">
                 <Link to="/" className="w-full h-full">
-                    <img src={Logo} alt="NL College Logo" className="w-full h-full" />
+                    <img src={isHomePage ? RedLogo : WhiteLogo} alt="NL College Logo" className="w-full h-full" />
                 </Link>
             </div>
 
@@ -98,9 +103,10 @@ const Header = () => {
                 <div className="relative" ref={aboutDropdownRef}>
                     <button
                         onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
-                        className="text-sm md:text-md font-bold text-[#902923] hover:text-white focus:outline-none"
+                        className={`text-sm md:text-md font-bold focus:outline-none ${isHomePage ? "text-[#902923]" : "text-white"
+                            } hover:text-[#902923]`}
                     >
-                        {t('navbar.aboutUs').toUpperCase()}
+                        {t("navbar.aboutUs").toUpperCase()}
                     </button>
                     {isAboutDropdownOpen && (
                         <div className="absolute top-full left-0 mt-2 w-80 bg-white text-black rounded-md shadow-lg z-20">
@@ -130,7 +136,8 @@ const Header = () => {
                 <div className="relative" ref={coursesDropdownRef}>
                     <button
                         onClick={() => setIsCoursesDropdownOpen(!isCoursesDropdownOpen)}
-                        className="text-sm md:text-md font-bold text-[#902923] hover:text-white focus:outline-none"
+                        className={`text-sm md:text-md font-bold text-[#902923] ${isHomePage ? "text-[#902923]" : "text-white"
+                            } hover:text-white focus:outline-none`}
                     >
                         {t('navbar.courses').toUpperCase()}
                     </button>
@@ -152,32 +159,39 @@ const Header = () => {
                     )}
                 </div>
 
-                <button onClick={handleModal} className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
+                <button onClick={handleModal} className={`text-sm md:text-md font-bold ${isHomePage ? "text-[#902923]" : "text-white"
+                    } text-[#902923] hover:text-white`}>
                     {t('navbar.prices').toUpperCase()}
                 </button>
-                <Link to="/visa" className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
+                <Link to="/visa" className={`text-sm md:text-md font-bold ${isHomePage ? "text-[#902923]" : "text-white"
+                    } text-[#902923] hover:text-white`}>
                     {t('navbar.visa').toUpperCase()}
                 </Link>
-                <Link to="/accommodation" className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
+                <Link to="/accommodation" className={`text-sm md:text-md font-bold ${isHomePage ? "text-[#902923]" : "text-white"
+                    } text-[#902923] hover:text-white`}>
                     {t('navbar.accommodation').toUpperCase()}
                 </Link>
-                <Link to="/student-life" className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
+                <Link to="/student-life" className={`text-sm md:text-md font-bold ${isHomePage ? "text-[#902923]" : "text-white"
+                    } text-[#902923] hover:text-white`}>
                     {t('navbar.studentLife').toUpperCase()}
                 </Link>
-                <Link to="/contact-us" className="text-sm md:text-md font-bold text-[#902923] hover:text-white">
+                <Link to="/contact-us" className={`text-sm md:text-md ${isHomePage ? "text-[#902923]" : "text-white"
+                    } font-bold text-[#902923] hover:text-white`}>
                     {t('navbar.contactUs').toUpperCase()}
                 </Link>
             </nav>
 
             {/* Language Selector */}
             <div className="hidden md:flex items-center space-x-2 cursor-pointer" ref={languageMenuRef} onClick={toggleLanguageMenu}>
-                <span className="text-lg text-[#902923] hover:text-white font-bold">{selectedLanguage}</span>
-                <div className="w-2 h-2 bg-[#902923] rounded-full"></div>
+                <span className={`text-lg ${isHomePage ? "text-[#902923]" : "text-white"
+                    } text-[#902923] hover:text-white font-bold`}>{selectedLanguage}</span>
+                <div className={`w-2 h-2 ${isHomePage ? "bg-[#902923]" : "bg-white"
+                    } bg-[#902923] rounded-full`}></div>
             </div>
 
             {/* Language Menu Dropdown */}
             {isLanguageOpen && (
-                <div className="absolute top-16 right-8 bg-white text-black rounded-md shadow-lg">
+                <div className="absolute top-32 right-6 bg-white text-black rounded-md shadow-lg">
                     <button
                         onClick={() => changeLanguage("EN")}
                         className="block w-full px-4 py-2 text-left hover:text-[#902923]"

@@ -10,10 +10,8 @@ function StudentLife() {
   return (
     <section className="flex flex-col items-center">
       {/* Picture area */}
-      <div className="w-full h-40 md:h-44 bg-cover bg-center relative" style={{ backgroundImage: "url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')" }}>
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-4xl md:text-4xl font-bold text-white mt-16">Student Life</h1>
-        </div>
+      <div className="w-full h-40 md:h-44 text-center relative bg-gray-900">
+          <h1 className="text-4xl md:text-4xl font-bold text-white mt-28">Student Life</h1>
       </div>
 
       <div>

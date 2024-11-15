@@ -21,6 +21,7 @@ import CatalanCourse from "../pages/courses/CatalanCourse";
 import RussianCourse from "../pages/courses/RussianCourse";
 import Visa from "../pages/Visa";
 import Accommodation from "../pages/Accommodation";
+import ContactButton from "../components/UI/ContactButton";
 
 function Layout() {
     return (
@@ -28,6 +29,7 @@ function Layout() {
             <Header />
             {/* When page changes it will automatically start from the top */}
             <ScrollToTop />
+            <ContactButton />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/our-mission" element={<OurMission />} />

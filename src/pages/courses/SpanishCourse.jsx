@@ -38,9 +38,9 @@ const RussianCourse = () => {
     return (
         <>
             <section className="relative flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 lg:px-24 py-12 lg:py-24 bg-white">
-                <div className="absolute w-full h-[230px] top-0 left-0 bg-gray-400">
-                    <img src="src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg" alt="Header Background" className="w-full h-full object-cover" />
-                    <h1 className='text-center -mt-20 text-5xl text-white font-bold'>Spanish Course</h1>
+                <div className="absolute w-full h-[180px] top-0 left-0 bg-gray-900">
+                    {/* <img src="src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg" alt="Header Background" className="w-full h-full object-cover" /> */}
+                    <h1 className='text-center mt-28 text-4xl text-white font-bold'>Spanish Course</h1>
                 </div>
                 <div className="relative mt-[250px] text-center lg:text-left max-w-md lg:max-w-lg mb-8 lg:mb-0">
                     <h2 className="text-3xl lg:text-7xl font-bold">
