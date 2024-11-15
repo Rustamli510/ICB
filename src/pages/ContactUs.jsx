@@ -13,7 +13,7 @@ const ContactUs = () => {
 
             <div className="mx-auto">
                 {/* Content Section */}
-                <div className="max-w-7xl flex flex-col md:flex-row text-black p-8 md:p-12 space-y-6 md:space-y-0 md:space-x-8 mx-auto">
+                <div className="max-w-6xl flex flex-col md:flex-row text-black p-8 md:p-12 space-y-6 md:space-y-0 md:space-x-8 mx-auto">
                     {/* Left Text */}
                     <div className="flex-1 text-4xl md:text-5xl font-bold">
                         <p>We want to hear from</p>
@@ -35,7 +35,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className="mx-auto bg-gray-900">
-                    <div className="flex flex-col md:flex-row items-center text-white p-8 space-y-6 md:space-y-0 md:space-x-8 max-w-7xl mx-auto">
+                    <div className="flex flex-col md:flex-row items-center text-white p-8 space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
 
                         {/* Left Side Text */}
                         <div className="flex-1">

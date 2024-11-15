@@ -39,7 +39,7 @@ const MeetOurTeam = () => {
                     </div>
                 </div>
             </section>
-            <section className="bg-gray-800 text-white py-12 px-6 md:px-12">
+            <section className="bg-[#B9BAA3] text-white py-12 px-6 md:px-12">
                 <div className="max-w-screen-lg mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold">
                         Meet our <span className="text-[#902923]">teachers</span>

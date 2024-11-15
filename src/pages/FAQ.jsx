@@ -64,7 +64,7 @@ const FAQ = () => {
                                 onClick={() => toggleAccordion(index)}
                             >
                                 <span className="text-md font-medium">{faq.question}</span>
-                                <span className="text-xl font-bold">
+                                <span className="text-xl font-bold text-[#902923]">
                                     {openIndex === index ? "−" : "+"}
                                 </span>
                             </button>
@@ -81,10 +81,6 @@ const FAQ = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
-                    <p>You can change the email address associated with your account by going to your account settings from a laptop or desktop.</p>
-                    <p>We offer support over email, and the best way to contact us is through the in-app help menu.</p>
                 </div>
             </section>
         </section>

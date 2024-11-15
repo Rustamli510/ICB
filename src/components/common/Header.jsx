@@ -2,6 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 
+
+//Images
+import Logo from '../../assets/images/icb_b-removebg-preview.png'
+
 const Header = () => {
     const { t, i18n } = useTranslation();
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
@@ -82,9 +86,9 @@ const Header = () => {
     return (
         <header className="w-full absolute top-0 left-0 z-10 bg-transparent text-white py-8 px-8 flex items-center justify-between">
             {/* Logo */}
-            <div className="text-xl font-bold">
-                <Link to="/">
-                    <img src="/path/to/logo.png" alt="NL College Logo" className="h-8" />
+            <div className="h-20 w-40">
+                <Link to="/" className="w-full h-full">
+                    <img src={Logo} alt="NL College Logo" className="w-full h-full" />
                 </Link>
             </div>
 

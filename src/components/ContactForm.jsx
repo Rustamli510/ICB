@@ -1,5 +1,9 @@
 import React from 'react';
 
+//Images
+import Logo from '../assets/images/icb_b-removebg-preview.png'
+
+
 const ContactForm = () => {
   return (
     <section
@@ -18,8 +22,8 @@ const ContactForm = () => {
             <p className="text-2xl mb-40">Contact us and start planning your education in Spain. Start being part of the #NLCollegeCommunity</p>
             <p className="text-lg font-semibold">Center accredited by the Cervantes Institute</p>
             <div className="flex items-center mt-4">
-              <img src="/path/to/logo1.png" alt="Logo 1" className="w-16 h-16 mr-4" />
-              <img src="/path/to/logo2.png" alt="Logo 2" className="w-16 h-16" />
+              <img src={Logo} alt="Logo 1" className="w-16 h-16 mr-4" />
+              <img src={Logo} alt="Logo 2" className="w-16 h-16" />
             </div>
           </div>
 

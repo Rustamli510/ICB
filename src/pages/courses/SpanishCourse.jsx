@@ -40,6 +40,7 @@ const RussianCourse = () => {
             <section className="relative flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 lg:px-24 py-12 lg:py-24 bg-white">
                 <div className="absolute w-full h-[230px] top-0 left-0 bg-gray-400">
                     <img src="src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg" alt="Header Background" className="w-full h-full object-cover" />
+                    <h1 className='text-center -mt-20 text-5xl text-white font-bold'>Spanish Course</h1>
                 </div>
                 <div className="relative mt-[250px] text-center lg:text-left max-w-md lg:max-w-lg mb-8 lg:mb-0">
                     <h2 className="text-3xl lg:text-7xl font-bold">
@@ -130,7 +131,7 @@ const RussianCourse = () => {
             </section>
             <section className="py-16 px-5 lg:px-0">
                 {/* Heading */}
-                <div className="max-w-7xl mx-auto text-center md:text-left mb-12">
+                <div className="max-w-6xl mx-auto text-center md:text-left mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">All about our Levels</h2>
                     <p className="text-lg md:text-xl text-gray-700">
                         We offer a comprehensive and progressive language learning program that caters to individuals of all levels. Whether you're an absolute beginner or an advanced student, our courses are designed to help you progress from level A1, beginner, all the way up to mastery level, C2. As you complete each level, you will receive a diploma.
@@ -138,7 +139,7 @@ const RussianCourse = () => {
                 </div>
 
                 {/* Levels Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {levelsData.map((level, index) => (
                         <div key={index} className={`${level.bgColor} text-white p-6 rounded-lg shadow-md`}>
                             <h3 className="text-xl font-semibold mb-2">{level.title}</h3>

@@ -97,7 +97,7 @@ const LearningLanguage = () => {
                     <h1 className="text-3xl md:text-5xl font-bold mb-10 md:mb-3">
                         Learning a new <br />language is one thing,
                     </h1>
-                    <p className="text-xl md:text-2xl md:w-[60%]">
+                    <p className="text-xl md:w-[60%]">
                         But doing it in a completely different, innovative way is a whole other experience.
                         <br />
                         <br />
