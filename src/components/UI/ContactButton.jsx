@@ -16,7 +16,7 @@ const ContactButton = () => {
     };
 
     return (
-        <div className="fixed right-10 bottom-10 z-50 flex items-center space-x-2">
+        <div className="fixed right-10 bottom-10 z-0 flex items-center space-x-2">
             {/* Text Container */}
             <div className="bg-white text-[#902923] rounded-full px-4 py-2 shadow-lg flex items-center transition-opacity duration-300 opacity-100">
                 <span className="text-sm font-semibold">Contact with us 👋</span>

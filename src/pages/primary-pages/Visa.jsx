@@ -1,5 +1,5 @@
 import React from "react";
-import ExploreSection from "../components/repeated/ExploreSection";
+import ExploreSection from "../../components/repeated/ExploreSection";
 
 const helpCards = [
     {

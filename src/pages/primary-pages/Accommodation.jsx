@@ -1,17 +1,16 @@
 import React from "react";
-import ExploreSection from "../components/repeated/ExploreSection";
+import ExploreSection from "../../components/repeated/ExploreSection";
 
 //Images
-import Pic from '../assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg'
+import Pic from '../../assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg'
 
 
 const Accommodation = () => {
     return (
         <section className="bg-gray-900 text-white">
-            {/* Background Image with Overlay Text */}
+            {/* Top */}
             <div
-                className="relative h-44 bg-cover bg-center flex items-center justify-center"
-                // style={{ backgroundImage: "url('src/assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg')" }}
+                className="relative h-44 flex items-center justify-center"
             >
                 <h1 className="text-3xl md:text-4xl font-bold mt-24 text-white">Accommodation</h1>
             </div>

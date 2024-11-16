@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Kingsbook from '../assets/images/gallery.jpg'
-import Gallery from '../assets/images/IMG_5774-780x290.jpg'
+import Kingsbook from '../../assets/images/gallery.jpg'
+import Gallery from '../../assets/images/IMG_5774-780x290.jpg'
 
 const AffiliationsRecognitions = () => {
   return (

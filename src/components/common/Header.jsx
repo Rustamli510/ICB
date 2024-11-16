@@ -89,7 +89,7 @@ const Header = () => {
     };
 
     return (
-        <header className="w-full absolute -top-16 left-0 z-10 bg-transparent text-white py-8 px-8 flex items-center justify-between">
+        <header className="w-full -top-14 absolute left-0 z-10 bg-transparent text-white py-8 px-8 flex items-center justify-between">
             {/* Logo */}
             <div className="w-40 h-auto">
                 <Link to="/" className="w-full h-full">
@@ -98,13 +98,13 @@ const Header = () => {
             </div>
 
             {/* Desktop Navbar */}
-            <nav className="hidden md:flex items-center space-x-8 relative">
+            <nav className="hidden md:flex items-center space-x-3 lg:space-x-8 relative text-[10px] lg:text-sm">
                 {/* About Us Dropdown */}
                 <div className="relative" ref={aboutDropdownRef}>
                     <button
                         onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
-                        className={`text-sm md:text-md font-bold focus:outline-none ${isHomePage ? "text-[#902923]" : "text-white"
-                            } hover:text-[#902923]`}
+                        className={`font-bold focus:outline-none ${isHomePage ? "text-[#902923]" : "text-white"
+                            } hover:text-white`}
                     >
                         {t("navbar.aboutUs").toUpperCase()}
                     </button>
@@ -136,7 +136,7 @@ const Header = () => {
                 <div className="relative" ref={coursesDropdownRef}>
                     <button
                         onClick={() => setIsCoursesDropdownOpen(!isCoursesDropdownOpen)}
-                        className={`text-sm md:text-md font-bold text-[#902923] ${isHomePage ? "text-[#902923]" : "text-white"
+                        className={`font-bold text-[#902923] ${isHomePage ? "text-[#902923]" : "text-white"
                             } hover:text-white focus:outline-none`}
                     >
                         {t('navbar.courses').toUpperCase()}
@@ -159,31 +159,35 @@ const Header = () => {
                     )}
                 </div>
 
-                <button onClick={handleModal} className={`text-sm md:text-md font-bold ${isHomePage ? "text-[#902923]" : "text-white"
-                    } text-[#902923] hover:text-white`}>
+                <button onClick={handleModal} className={`font-bold ${isHomePage ? "text-[#902923]" : "text-white"
+                    } hover:text-white`}>
                     {t('navbar.prices').toUpperCase()}
                 </button>
-                <Link to="/visa" className={`text-sm md:text-md font-bold ${isHomePage ? "text-[#902923]" : "text-white"
-                    } text-[#902923] hover:text-white`}>
+                <Link to="/visa" className={`font-bold ${isHomePage ? "text-[#902923]" : "text-white"
+                    } hover:text-white`}>
                     {t('navbar.visa').toUpperCase()}
                 </Link>
-                <Link to="/accommodation" className={`text-sm md:text-md font-bold ${isHomePage ? "text-[#902923]" : "text-white"
-                    } text-[#902923] hover:text-white`}>
+                <Link to="/accommodation" className={`font-bold ${isHomePage ? "text-[#902923]" : "text-white"
+                    } hover:text-white`}>
                     {t('navbar.accommodation').toUpperCase()}
                 </Link>
-                <Link to="/student-life" className={`text-sm md:text-md font-bold ${isHomePage ? "text-[#902923]" : "text-white"
-                    } text-[#902923] hover:text-white`}>
+                <Link to="/student-life" className={`font-bold ${isHomePage ? "text-[#902923]" : "text-white"
+                    } hover:text-white`}>
                     {t('navbar.studentLife').toUpperCase()}
                 </Link>
-                <Link to="/contact-us" className={`text-sm md:text-md ${isHomePage ? "text-[#902923]" : "text-white"
-                    } font-bold text-[#902923] hover:text-white`}>
+                <Link to="/contact-us" className={`font-bold${isHomePage ? "text-[#902923]" : "text-white"
+                    } font-bold hover:text-white`}>
                     {t('navbar.contactUs').toUpperCase()}
+                </Link>
+                <Link to="/blog" className={`font-bold ${isHomePage ? "text-[#902923]" : "text-white"
+                    } hover:text-white`}>
+                    {t('navbar.blog').toUpperCase()}
                 </Link>
             </nav>
 
             {/* Language Selector */}
             <div className="hidden md:flex items-center space-x-2 cursor-pointer" ref={languageMenuRef} onClick={toggleLanguageMenu}>
-                <span className={`text-lg ${isHomePage ? "text-[#902923]" : "text-white"
+                <span className={`text-[10px] lg:text-lg ${isHomePage ? "text-[#902923]" : "text-white"
                     } text-[#902923] hover:text-white font-bold`}>{selectedLanguage}</span>
                 <div className={`w-2 h-2 ${isHomePage ? "bg-[#902923]" : "bg-white"
                     } bg-[#902923] rounded-full`}></div>
@@ -362,6 +366,9 @@ const Header = () => {
                     </button>
                     <button onClick={() => handleMenuClick("/contact-us")} className="text-lg font-bold hover:text-[#902923]">
                         {t('navbar.contactUs')}
+                    </button>
+                    <button onClick={() => handleMenuClick("/blog")} className="text-lg font-bold hover:text-[#902923]">
+                        {t('navbar.blog')}
                     </button>
                 </div>
             )}

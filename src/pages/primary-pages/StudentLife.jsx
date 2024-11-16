@@ -1,10 +1,10 @@
 import React from 'react';
 
 //Images
-import Pic from '../assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg'
+import Pic from '../../assets/images/brooke-cagle--uHVRvDr7pg-unsplash.jpg'
 
 //Videos
-import BannerVideo from '../assets/videos/BannerVideo.mp4';
+import BannerVideo from '../../assets/videos/BannerVideo.mp4';
 
 function StudentLife() {
   return (

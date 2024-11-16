@@ -1,5 +1,5 @@
 import React from "react";
-import ExploreSection from "../components/repeated/ExploreSection";
+import ExploreSection from "../../components/repeated/ExploreSection";
 
 
 const levelsData = [
@@ -46,7 +46,7 @@ const OurProgram = () => {
                 </h2>
             </div>
 
-            <div className="container max-w-6xl mx-auto py-4">
+            <div className="container max-w-6xl mx-auto py-4 px-4 lg:px-0">
                 {/* Content Section */}
                 <div className="flex flex-col md:flex-row mt-8 space-y-6 md:space-y-0 md:space-x-2">
                     {/* Left Side Text */}
